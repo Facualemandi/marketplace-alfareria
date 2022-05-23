@@ -9,11 +9,11 @@ const AddCartProduct = () => {
   const [count, setCount] = useState(0)
 
   const addCount = () => { 
-      setCount(count + 1)
+    setCount(count + 1)
     
   }
   const deleteCount = () => { 
-     if(count > 1){
+     if(count > 0){
        setCount(count - 1)
      }else{
        setCount(count)
@@ -26,10 +26,10 @@ const AddCartProduct = () => {
   return (
       <>
         <section className='container_buttons_add'>
-            <section >
-               <button><AiOutlineMinus onClick={addCount}/></button>
+            <section className='section_btns_add_minus'>
+               <button onClick={deleteCount}><AiOutlineMinus /></button>
                <span>{count}</span>
-               <button><GrFormAdd onClick={deleteCount}/></button>
+               <button onClick={addCount}><GrFormAdd/></button>
             </section>
 
             <section>
