@@ -1,0 +1,37 @@
+.container_buttons_add {
+  display: flex;
+  flex-direction: column;
+  width: 90vw;
+  margin: auto;
+  margin-top: 3vh;
+}
+.container_buttons_add section:nth-child(1) {
+  width: 82.5vw;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1vh;
+  background-color: rgb(234, 246, 255);
+}
+.container_buttons_add section:nth-child(2) button {
+    width: 82.5vw;
+    height: 35px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(255, 225, 206);
+}
+
+.container_buttons_add section:nth-child(1) button {
+    width: 38vw;
+    height: 35px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(234, 246, 255);
+}
+
+.cart_plus {
+  margin-left: 10px;
+  font-family: "Open Sans", sans-serif;
+  color: grey;
+}
