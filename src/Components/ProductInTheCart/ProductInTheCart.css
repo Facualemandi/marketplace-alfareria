@@ -1,0 +1,10 @@
+.contaianer_product_cart{
+    display: flex;
+}
+
+.img_product_cart{
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    margin: 1vh;
+}

@@ -1,13 +1,23 @@
 import React from "react";
 import "./NavegationContainer.css";
 import { GiShoppingCart } from "react-icons/gi";
+import ProductInTheCart from "../ProductInTheCart/ProductInTheCart";
 
-const NavegationContainer = ({ openCartPanel, cartPanel }) => {
+const NavegationContainer = ({ openCartPanel, cartPanel, productInTheCart, count }) => {
+  // let objetProduct = Object.values(productInTheCart)
+  console.log(Object.values(productInTheCart))
+
+  const valueProduct = Object.values(productInTheCart)
+  
+  console.log(productInTheCart)
   return (
     <>
      {cartPanel && 
        <section className="panel_container">
-            
+            <ProductInTheCart
+              valueProduct={valueProduct}
+              count={count}
+            />
        </section>
      }
 

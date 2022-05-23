@@ -2,7 +2,13 @@ import React from "react";
 import AddCartProduct from "../GAddCartProduct/AddCartProduct";
 import "./DescriptionOneProduct.css";
 
-const DescriptionOneProduct = ({ descriptionProduct }) => {
+const DescriptionOneProduct = ({
+  descriptionProduct,
+  count,
+  addProductCart,
+  deleteCount,
+  addCount,
+}) => {
   const { name, description, price, image } = descriptionProduct;
 
   return (
@@ -17,8 +23,13 @@ const DescriptionOneProduct = ({ descriptionProduct }) => {
           <p>{description}</p>
         </section>
 
-           <AddCartProduct/>
-
+        <AddCartProduct
+          descriptionProduct={descriptionProduct}
+          count={count}
+          addProductCart={addProductCart}
+          addCount={addCount}
+          deleteCount={deleteCount}
+        />
       </section>
     </>
   );
