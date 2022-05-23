@@ -1,0 +1,38 @@
+.container_prodcts_ui {
+  margin: 1vh;
+  margin-top: 3vh;
+  cursor: pointer;
+}
+
+.container_prodcts_ui.is-active{
+    border-radius: 5px;
+    background-color:rgb(241, 241, 241);;
+    box-shadow: 1px 1px 3px 1px rgb(228, 228, 228);
+    padding: 5px;
+
+}
+
+
+.img_producs_ui {
+  width: 100%;
+  height: 130px;
+  border-radius: 5px;
+}
+
+.section_description_product p {
+  font-family: sans-serif;
+  font-size: 16px;
+  color: grey;
+}
+.section_description_product span {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  color: rgb(0, 124, 41);
+}
+
+.more_product{
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+
+}

@@ -1,0 +1,25 @@
+.container_search {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90vw;
+  margin: auto;
+  margin-top: 3vh;
+}
+
+.section_search {
+  width: 70vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: rgb(235, 235, 235);
+  box-shadow: 1px 1px 2px 1px rgb(226, 226, 226);
+}
+
+.section_search input {
+  height: 30px;
+  border: none;
+  background-color: rgb(235, 235, 235);
+}

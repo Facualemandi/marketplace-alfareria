@@ -1,0 +1,20 @@
+.container_total_logo {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 2vh;
+}
+
+.logo{
+    width: 80vw;
+    display: flex;
+    margin: auto;
+}
+
+.container_total_logo p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    color: grey;
+    margin-top: 2vh;
+}
+
