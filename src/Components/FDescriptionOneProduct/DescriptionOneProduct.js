@@ -1,14 +1,24 @@
-import React from 'react'
-import './DescriptionOneProduct.css'
+import React from "react";
+import "./DescriptionOneProduct.css";
 
-const DescriptionOneProduct = ({descriptionProduct}) => {
-  
+const DescriptionOneProduct = ({ descriptionProduct }) => {
+  const { name, description, price, image } = descriptionProduct;
+
   return (
-      <>
-       <h1> Facundo</h1>
-       <p>{descriptionProduct.name}</p>
-      </>
-  )
-}
+    <>
+      <section>
+        <img className="img_description_one" alt={name} src={image} />
 
-export default DescriptionOneProduct
+        <section className="section_description_one">
+          <p>{name}</p> 
+
+          <span>${price}</span>
+
+          <p>{description}</p>
+        </section>
+      </section>
+    </>
+  );
+};
+
+export default DescriptionOneProduct;
