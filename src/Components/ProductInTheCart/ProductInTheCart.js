@@ -2,6 +2,9 @@ import React from "react";
 import "./ProductInTheCart.css";
 
 const ProductInTheCart = ({ valueProduct, count }) => {
+   
+  const totalValue = (valueProduct[2] * count)
+
   return (
     <>
       <section className="contaianer_product_cart">
@@ -11,13 +14,13 @@ const ProductInTheCart = ({ valueProduct, count }) => {
           src={valueProduct[4]}
         />
 
-        <section>
+        <section className="description_product_cart">
           <p>{valueProduct[1]}</p>
           <span>${valueProduct[2]}</span>
-          <p></p>
+          <p> total: ${totalValue} </p>
         </section>
 
-          <span>x{count}</span>
+          <span className="count_product_cart">x{count}</span>
       </section>
     </>
   );
