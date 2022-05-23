@@ -1,0 +1,35 @@
+.nav_conatiner_cart {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  bottom: 0px;
+  width: 100vw;
+  height: 50px;
+  background-color: rgb(255, 255, 255);
+}
+
+.cart_vanegation_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: white;
+  color: rgb(104, 104, 104);
+  width: 25px;
+  height: 25px;
+}
+
+.nav_conatiner_cart section p {
+  color: rgb(104, 104, 104);
+  font-family: sans-serif;
+  font-size: 14px;
+}
+
+.panel_container{
+  position: fixed;
+  height: 50px;
+  width: 100vw;
+  bottom: 50px;
+  background-color: rgb(220, 220, 220);
+}

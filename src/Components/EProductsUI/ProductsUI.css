@@ -2,13 +2,20 @@
   margin: 1vh;
   margin-top: 3vh;
   cursor: pointer;
+  transition: 1s;
+  background-color: rgb(243, 250, 253);
+  box-shadow: 1px 1px 2px 1px rgb(235, 235, 235);
+  border-radius: 5px;
+  padding: 5px;
+  
 }
 
 .container_prodcts_ui.is-active{
     border-radius: 5px;
-    background-color:rgb(241, 241, 241);;
+    background-color: rgb(233, 244, 248);
     box-shadow: 1px 1px 3px 1px rgb(228, 228, 228);
     padding: 5px;
+    transition: 0.5s;
 
 }
 
