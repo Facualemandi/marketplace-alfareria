@@ -40,6 +40,7 @@ const ProductInTheCart = ({ valueProduct, count, productInTheCart, setProductInT
             count={count}
             productValue={productValue}
             deleteObj={deleteObj}
+            productInTheCart={productInTheCart}
           />
         ))
       )}

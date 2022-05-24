@@ -6,7 +6,7 @@
   z-index: 999;
   bottom: 0px;
   width: 100vw;
-  height: 50px;
+  height: 60px;
   background-color: rgb(255, 255, 255);
 }
 
@@ -32,5 +32,29 @@
   width: 100vw;
   bottom: 50px;
   background-color: rgb(220, 220, 220);
+}
+
+.section_iconcart_number{
+  display: flex;
+}
+
+.number_cart{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: max-content;
+  height: max-content;
+  position: relative;
+  bottom: 5px;
+  padding: 5px;
+  border-radius: 100%;
+}
+
+.number_cart.is-active{
+  background-color: rgb(255, 214, 132);
+  color: rgb(55, 55, 55);
+  font-family: sans-serif;
+  font-size: 16px;
 }
 
