@@ -18,7 +18,7 @@ const NavegationContainer = ({
   return (
     <>
       {cartPanel && (
-        <section className="panel_container">
+        <section className='panel_container'>
           <ProductInTheCart
             valueProduct={valueProduct}
             count={count}
@@ -28,6 +28,7 @@ const NavegationContainer = ({
         </section>
       )}
 
+
       <nav className="nav_conatiner_cart">
         <section onClick={openCartPanel} className="section_iconcart_number">
           <section>
@@ -36,6 +37,7 @@ const NavegationContainer = ({
           </section>
           <span className={`number_cart ${productInTheCart.length > 0 &&  'is-active' }` }>{productInTheCart.length}</span>
         </section>
+
       </nav>
     </>
   );

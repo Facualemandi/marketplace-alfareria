@@ -17,6 +17,7 @@ function App() {
     if (count > 0) {
        setProductInTheCart([...productInTheCart, data]);
        setOpenModal(true)
+       setCount(0)
   
     } else {
       console.log("Es igual a 0");
@@ -62,6 +63,7 @@ function App() {
               deleteCount={deleteCount}
               openModal={openModal}
               setOpenModal={setOpenModal}
+            
         
             />
           }
