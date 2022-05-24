@@ -4,7 +4,7 @@ import { GrFormAdd } from 'react-icons/gr';
 import { AiOutlineMinus } from 'react-icons/ai';
 import { BsCartPlus } from 'react-icons/bs';
 
-const AddCartProduct = ({ count, addProductCart, addCount, deleteCount, data}) => {
+const AddCartProduct = ({ count, addProductCart, addCount, deleteCount, data, onReturn}) => {
 
      
 
@@ -23,6 +23,8 @@ const AddCartProduct = ({ count, addProductCart, addCount, deleteCount, data}) =
                <button onClick={() => addProductCart(data, count)}>Add to Cart<BsCartPlus className='cart_plus'/></button>  
               
             </section>  
+
+             <button className='return' onClick={onReturn}> Volver </button>
 
               
                    

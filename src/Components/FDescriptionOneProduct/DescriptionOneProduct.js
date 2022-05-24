@@ -12,6 +12,7 @@ const DescriptionOneProduct = ({
   addCount,
   openModal,
   setOpenModal,
+  onReturn,
 }) => {
   const { name, description, price, image } = descriptionProduct;
 
@@ -38,6 +39,7 @@ const DescriptionOneProduct = ({
           addProductCart={addProductCart}
           addCount={addCount}
           deleteCount={deleteCount}
+          onReturn={onReturn}
 
         />
       </section>
