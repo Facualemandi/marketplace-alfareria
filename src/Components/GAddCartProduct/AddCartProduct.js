@@ -3,11 +3,20 @@ import './AddCartProduct.css'
 import { GrFormAdd } from 'react-icons/gr';
 import { AiOutlineMinus } from 'react-icons/ai';
 import { BsCartPlus } from 'react-icons/bs';
+import { useTotalProducts } from '../../Hooks/useTotalProducts';
+import OthersProducts from '../OthersProducts/OthersProducts';
 
 const AddCartProduct = ({ count, addProductCart, addCount, deleteCount, data, onReturn}) => {
 
-     
+   const [items,itemTwo] = useTotalProducts()
 
+  const isItemTwo = Object.values(itemTwo)
+
+   
+
+   const itemsasd =() => {
+     console.log(isItemTwo)
+   }
   
   console.log(data)
   return (
@@ -24,8 +33,29 @@ const AddCartProduct = ({ count, addProductCart, addCount, deleteCount, data, on
               
             </section>  
 
-             <button className='return' onClick={onReturn}> Volver </button>
 
+
+          <p className='other_products_cart'> Otros productos... </p>
+            <section className='deslize'>
+                {isItemTwo.map(el => (
+              
+                    <OthersProducts
+                    name={el.name}
+                    price={el.price}
+                    image ={el.image}
+                    />
+           
+                
+                ))}
+                <p onClick={itemsasd}>  HOLA </p>
+
+            </section>
+
+
+         
+
+
+             <button className='return' onClick={onReturn}> Volver </button>
               
                    
         </section>

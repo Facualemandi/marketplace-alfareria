@@ -5,14 +5,15 @@
   margin: auto;
   margin-top: 3vh;
 }
-.container_buttons_add section:nth-child(1) {
+
+.section_btns_add_minus{
+  background-color: rgb(234, 246, 255);
   width: 82.5vw;
   border-radius: 5px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1vh;
-  background-color: rgb(234, 246, 255);
 }
 .container_buttons_add section:nth-child(2) button {
     width: 82.5vw;
@@ -48,4 +49,20 @@
   padding: 1vh;
   margin-bottom: 15vh;
 
+}
+
+
+.deslize{
+  max-height: 230px;
+  display: flex;
+  overflow-x: auto;
+}
+
+.other_products_cart{
+  margin-top: 5vh;
+  font-family: sans-serif;
+  font-size: 16px;
+  color: rgb(43, 43, 43);
+  margin-left: 15px;
+  margin-bottom: 10px;
 }
