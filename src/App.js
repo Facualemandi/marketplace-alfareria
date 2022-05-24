@@ -32,7 +32,7 @@ function App() {
   function loaderFalse() {
     setTimeout(() => {
       setLoader(false);
-    }, 2000);
+    }, 1500);
   }
   loaderFalse();
 
