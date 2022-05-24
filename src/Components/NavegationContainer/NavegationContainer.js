@@ -3,7 +3,7 @@ import "./NavegationContainer.css";
 import { GiShoppingCart } from "react-icons/gi";
 import ProductInTheCart from "../ProductInTheCart/ProductInTheCart";
 
-const NavegationContainer = ({ openCartPanel, cartPanel, productInTheCart, count }) => {
+const NavegationContainer = ({ openCartPanel, cartPanel, productInTheCart, count, setProductInTheCart}) => {
   // let objetProduct = Object.values(productInTheCart)
 
 
@@ -18,6 +18,7 @@ const NavegationContainer = ({ openCartPanel, cartPanel, productInTheCart, count
               valueProduct={valueProduct}
               count={count}
               productInTheCart={productInTheCart}
+              setProductInTheCart={setProductInTheCart}
             />
        </section>
      }

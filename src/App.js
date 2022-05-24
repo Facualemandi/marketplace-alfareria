@@ -43,6 +43,7 @@ function App() {
         openCartPanel={openCartPanel}
         cartPanel={cartPanel}
         productInTheCart={productInTheCart}
+        setProductInTheCart={setProductInTheCart}
         count={count}
         descriptionProduct={descriptionProduct}
 

@@ -10,7 +10,7 @@
     justify-content: space-between;
     align-items: center;
     margin: 1vh;
-    width: 85vw;
+    width: 95vw;
     border: 1px solid rgb(197, 197, 197);
     border-radius: 5px;
 }
@@ -26,4 +26,11 @@
     font-family: 'Montserrat', sans-serif;
     margin-left: 5px;
     margin-right: 5px;
+}
+
+.icon_delete_cart{
+    margin: 1vh;
+    width: 30px;
+    height: 30px;
+    color: rgb(97, 97, 97);
 }

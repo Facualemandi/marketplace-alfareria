@@ -1,21 +1,21 @@
 import React from "react";
 import "./AcumulationOfProductCart.css";
+import { RiDeleteBin6Line } from "react-icons/ri";
 
 const AcumulationOfProductCart = ({
-  asd,
+  deleteObj,
   productValue,
   name,
   image,
   price,
   count,
-}) => {
-  const onclick = () => {
-    console.log(productValue);
-  };
+  id,
 
+}) => {
+  
   return (
     <>
-
+    
       <section className="container_acumulation_procut">
         <img src={image} className="img_acumulation_product" />
 
@@ -25,6 +25,8 @@ const AcumulationOfProductCart = ({
         </section>
 
         <p className="count_acumulation">x{count}</p>
+
+        <RiDeleteBin6Line onClick={() => deleteObj(id)} className="icon_delete_cart" />
       </section>
     </>
   );
