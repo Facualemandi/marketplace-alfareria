@@ -6,6 +6,8 @@ import { BsCartPlus } from 'react-icons/bs';
 
 const AddCartProduct = ({ count, addProductCart, addCount, deleteCount, data}) => {
 
+     
+
   
   console.log(data)
   return (
@@ -18,7 +20,8 @@ const AddCartProduct = ({ count, addProductCart, addCount, deleteCount, data}) =
             </section>
 
             <section>
-               <button onClick={() => addProductCart(data, count)}>Add to Cart<BsCartPlus className='cart_plus'/></button>      
+               <button onClick={() => addProductCart(data, count)}>Add to Cart<BsCartPlus className='cart_plus'/></button>  
+              
             </section>  
 
               

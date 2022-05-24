@@ -1,0 +1,29 @@
+.section_whatsapp {
+  width: 80vw;
+  margin: 1vh auto;
+  color: black;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.section_whatsapp a {
+  color: rgb(19, 145, 19);
+  font-family: sans-serif;
+  font-size: 14px;
+  margin-left: 10px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  color: rgb(1, 138, 37);
+}
+
+.icon_whatsapp {
+  width: 25px;
+  height: 25px;
+  margin-left: 10px;
+  color: rgb(2, 169, 2);
+}

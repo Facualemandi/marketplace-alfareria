@@ -1,17 +1,17 @@
 import React, { useState } from "react";
 import { BsCartX } from "react-icons/bs";
 import AcumulationOfProductCart from "../AcumulationOfProductCart/AcumulationOfProductCart";
+import WhatsApp from "../WhatsApp/WhatsApp";
 import "./ProductInTheCart.css";
 
 const ProductInTheCart = ({
-  valueProduct,
   count,
   productInTheCart,
   setProductInTheCart,
   newCount,
 }) => {
 
-  const totalValue = valueProduct[2] * count;
+  
   const productValue = Object.values(productInTheCart);
 
 
@@ -43,7 +43,11 @@ const ProductInTheCart = ({
             newCount={newCount}
           />
         ))
+      
       )}
+         
+         {productValue.length > 0 &&  <WhatsApp productInTheCart={productInTheCart}/>}
+        
     </>
   );
 };

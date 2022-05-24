@@ -10,7 +10,6 @@ const NavegationContainer = ({
   count,
   setProductInTheCart,
   newCount,
-  
 }) => {
   // let objetProduct = Object.values(productInTheCart)
 
@@ -19,7 +18,7 @@ const NavegationContainer = ({
   return (
     <>
       {cartPanel && (
-        <section className='panel_container'>
+        <section className="panel_container">
           <ProductInTheCart
             valueProduct={valueProduct}
             count={count}
@@ -30,16 +29,24 @@ const NavegationContainer = ({
         </section>
       )}
 
-
       <nav className="nav_conatiner_cart">
         <section onClick={openCartPanel} className="section_iconcart_number">
           <section>
-            <GiShoppingCart className="cart_vanegation_container" />
-            <p> Cart </p>
+            <GiShoppingCart
+              className={`cart_vanegation_container ${
+                productInTheCart.length > 0 && "is-active"
+              }`}
+            />
+            <p className={` cart_navegation_nav ${productInTheCart.length > 0 && 'cart_active'}`}> Cart </p>
           </section>
-          <span className={`number_cart ${productInTheCart.length > 0 &&  'is-active' }` }>{productInTheCart.length}</span>
+          <span
+            className={`number_cart ${
+              productInTheCart.length > 0 && "is-active"
+            }`}
+          >
+            {productInTheCart.length}
+          </span>
         </section>
-
       </nav>
     </>
   );

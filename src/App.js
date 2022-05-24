@@ -12,19 +12,18 @@ function App() {
   const [cartPanel, setCartPanel] = useState(false);
   const [productInTheCart, setProductInTheCart] = useState([]);
   const [openModal, setOpenModal] = useState(false)
-  const [newCount, setNewCount] = useState(0)
+  const [newCount, setNewCount] = useState([])
 
 
-  const addProductCart = (data, ) => {
+  const addProductCart = (data, count) => {
     if (count > 0) {
        setProductInTheCart([...productInTheCart, data]);
-       console.log(data)
        setNewCount(count)
        setOpenModal(true)
        setCount(0)
   
     } else {
-      console.log("Es igual a 0");
+       
     }
   };
 

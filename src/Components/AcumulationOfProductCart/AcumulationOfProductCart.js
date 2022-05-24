@@ -11,7 +11,10 @@ const AcumulationOfProductCart = ({
   id,
   newCount,
 
-}) => {
+}) => 
+{
+  const totalValue = newCount * price;
+  console.log(totalValue)
   
   return (
     <>
@@ -22,6 +25,7 @@ const AcumulationOfProductCart = ({
         <section className="section_acumularion_product">
           <p>{name}</p>
           <span>${price}</span>
+          <p>${totalValue}.00</p>
         </section>
 
         <p className="count_acumulation">x{newCount}</p>
