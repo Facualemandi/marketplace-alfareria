@@ -1,55 +1,45 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Route, Routes, useNavigate } from "react-router-dom";
 import ContainerUI from "./Components/AContainerUI/ContainerUI";
 import ErrorPage from "./Components/ErrorPage/ErrorPage";
 import DescriptionOneProduct from "./Components/FDescriptionOneProduct/DescriptionOneProduct";
 import NavegationContainer from "./Components/NavegationContainer/NavegationContainer";
 import { useCount } from "./Hooks/useCount";
-import { useTotalProducts } from "./Hooks/useTotalProducts";
+import { useTotalState } from "./Hooks/useTotalState";
+import Loader from "./Loader/Loader";
 
 function App() {
-  const { count, addCount, deleteCount, setCount } = useCount();
-  const [descriptionProduct, setDescriptionProduct] = useState([]);
-  const [cartPanel, setCartPanel] = useState(false);
-  const [productInTheCart, setProductInTheCart] = useState([]);
-  const [openModal, setOpenModal] = useState(false)
-  const [newCount, setNewCount] = useState([])
+  const [loader, setLoader] = useState(true);
+  const { count, addCount, deleteCount } = useCount();
+  const {
+    setOpenModal,
+    setProductInTheCart,
+    productInTheCart,
+    cartPanel,
+    descriptionProduct,
+    openModal,
+    newCount,
+    addProductCart,
+    seeProduct,
+    openCartPanel,
+  } = useTotalState();
 
-
-  const addProductCart = (data, count) => {
-    if (count > 0) {
-       setProductInTheCart([...productInTheCart, data]);
-       setNewCount(count)
-       setOpenModal(true)
-       setCount(0)
-  
-    } else {
-       
-    }
+  const nav = useNavigate();
+  const onReturn = () => {
+    nav("/");
   };
 
-  const seeProduct = (el) => {
-    setDescriptionProduct(el);
-  };
-
-  const openCartPanel = () => {
-    if (!cartPanel) {
-      setCartPanel(true);
-    } else {
-      setCartPanel(false);
-    }
-  };
-
-   const nav = useNavigate()
-
-
-   const onReturn = () => {
-       nav('/')
-   }
-
+  function loaderFalse() {
+    setTimeout(() => {
+      setLoader(false);
+    }, 3000);
+  }
+  loaderFalse();
 
   return (
     <>
+      {loader && <Loader />}
+
       <NavegationContainer
         openCartPanel={openCartPanel}
         cartPanel={cartPanel}
@@ -58,30 +48,29 @@ function App() {
         count={count}
         descriptionProduct={descriptionProduct}
         newCount={newCount}
-       
-
       />
 
-      <Routes>
-        <Route path="/" element={<ContainerUI seeProduct={seeProduct} />} />
-        <Route
-          path="/description/:name"
-          element={
-            <DescriptionOneProduct
-              descriptionProduct={descriptionProduct}
-              addProductCart={addProductCart}
-              count={count}
-              addCount={addCount}
-              deleteCount={deleteCount}
-              openModal={openModal}
-              setOpenModal={setOpenModal}
-              onReturn={onReturn}
-             
-            />
-          }
+      {!loader && (
+        <Routes>
+          <Route path="/" element={<ContainerUI seeProduct={seeProduct} />} />
+          <Route
+            path="/description/:name"
+            element={
+              <DescriptionOneProduct
+                descriptionProduct={descriptionProduct}
+                addProductCart={addProductCart}
+                count={count}
+                addCount={addCount}
+                deleteCount={deleteCount}
+                openModal={openModal}
+                setOpenModal={setOpenModal}
+                onReturn={onReturn}
+              />
+            }
           />
-          <Route path="/*" element={<ErrorPage/>}/>
-      </Routes>
+          <Route path="/*" element={<ErrorPage />} />
+        </Routes>
+      )}
     </>
   );
 }
