@@ -8,6 +8,7 @@ const ProductInTheCart = ({
   count,
   productInTheCart,
   setProductInTheCart,
+  newCount,
 }) => {
 
   const totalValue = valueProduct[2] * count;
@@ -39,6 +40,7 @@ const ProductInTheCart = ({
             productValue={productValue}
             deleteObj={deleteObj}
             productInTheCart={productInTheCart}
+            newCount={newCount}
           />
         ))
       )}

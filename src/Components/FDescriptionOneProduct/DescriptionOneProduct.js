@@ -38,6 +38,7 @@ const DescriptionOneProduct = ({
           addProductCart={addProductCart}
           addCount={addCount}
           deleteCount={deleteCount}
+
         />
       </section>
     </>

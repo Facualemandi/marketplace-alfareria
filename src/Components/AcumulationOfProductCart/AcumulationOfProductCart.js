@@ -9,6 +9,7 @@ const AcumulationOfProductCart = ({
   price,
   count,
   id,
+  newCount,
 
 }) => {
   
@@ -23,7 +24,7 @@ const AcumulationOfProductCart = ({
           <span>${price}</span>
         </section>
 
-        <p className="count_acumulation">x{count}</p>
+        <p className="count_acumulation">x{newCount}</p>
 
         <RiDeleteBin6Line onClick={() => deleteObj(id)} className="icon_delete_cart" />
       </section>
