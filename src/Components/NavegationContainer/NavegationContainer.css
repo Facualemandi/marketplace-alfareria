@@ -6,7 +6,7 @@
   z-index: 999;
   bottom: 0px;
   width: 100vw;
-  height: 60px;
+  height: 70px;
   background-color: rgb(255, 255, 255);
 }
 
@@ -16,8 +16,8 @@
   justify-content: center;
   background-color: white;
   color: rgb(104, 104, 104);
-  width: 25px;
-  height: 25px;
+  width: 35px;
+  height: 35px;
 }
 
 .cart_vanegation_container.is-active{
@@ -35,11 +35,14 @@
   height: auto;
   width: 100vw;
   bottom: 60px;
-  background-color: rgb(220, 220, 220);
+  background-color: rgb(245, 252, 255);
 }
 
 .section_iconcart_number {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .number_cart {
@@ -50,16 +53,16 @@
   width: max-content;
   height: max-content;
   position: relative;
-  bottom: 5px;
+  bottom: 15px;
   padding: 5px;
   border-radius: 100%;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .number_cart.is-active {
   color: rgb(55, 55, 55);
   font-family: sans-serif;
-  font-size: 12px;
+  font-size: 14px;
   color: green;
 }
 

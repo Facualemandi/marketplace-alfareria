@@ -11,13 +11,17 @@
     align-items: center;
     margin: 1vh;
     width: 95vw;
-    border: 1px solid rgb(197, 197, 197);
+    box-shadow: 1px 1px 2px 1px rgb(222, 222, 222);
     border-radius: 5px;
 }
 
 .section_acumularion_product{
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
+}
+
+.total_acumulation{
+    font-weight: bold;
 }
 
 .count_acumulation{
