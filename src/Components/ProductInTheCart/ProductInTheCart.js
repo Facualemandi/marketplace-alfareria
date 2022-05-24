@@ -1,5 +1,5 @@
 import React from "react";
-import { FaSadCry } from 'react-icons/fa';
+import { BsCartX } from 'react-icons/bs';
 import "./ProductInTheCart.css";
 
 const ProductInTheCart = ({ valueProduct, count, productInTheCart }) => {
@@ -25,14 +25,14 @@ const ProductInTheCart = ({ valueProduct, count, productInTheCart }) => {
 
           <section className="description_product_cart">
             <p>{valueProduct[1]}</p>
-            <span>${valueProduct[2]}</span>
+            <span className="dsad">${valueProduct[2]}</span>
             <p> total: ${totalValue} </p>
           </section>
 
           <span className="count_product_cart">x{count}</span>
         </section>
       ) : (
-        <p onClick={asd} className='no_product'> No Hay productos <FaSadCry className="icon_cry"/> </p>
+        <p onClick={asd} className='no_product'> Empty cart <BsCartX className="icon_cry"/> </p>
       )}
     </>
   );

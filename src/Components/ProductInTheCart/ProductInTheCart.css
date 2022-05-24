@@ -5,6 +5,7 @@
   border: 1px solid rgb(194, 194, 194);
   margin: 1vh;
   border-radius: 5px;
+  width: 80vw;
 }
 
 .img_product_cart {
@@ -16,7 +17,7 @@
 
 .description_product_cart {
   font-family: sans-serif;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .count_product_cart {
@@ -33,9 +34,16 @@
   margin: 2vh auto;
   font-family: sans-serif;
   display: flex;
+  align-items: center;
+  font-weight: bold;
 }
 
 .icon_cry{
-  color: rgb(254, 254, 124);
   margin-left: 10px;
+  width: 30px;
+  height: 30px;
+}
+
+.dsad{
+  margin-top: 10px;
 }
