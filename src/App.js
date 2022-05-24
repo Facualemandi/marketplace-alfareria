@@ -3,30 +3,21 @@ import { Route, Routes } from "react-router-dom";
 import ContainerUI from "./Components/AContainerUI/ContainerUI";
 import DescriptionOneProduct from "./Components/FDescriptionOneProduct/DescriptionOneProduct";
 import NavegationContainer from "./Components/NavegationContainer/NavegationContainer";
+import { useCount } from "./Hooks/useCount";
 
 function App() {
+  const { count, addCount, deleteCount, setCount } = useCount();
+
   const [descriptionProduct, setDescriptionProduct] = useState([]);
   const [cartPanel, setCartPanel] = useState(false);
   const [productInTheCart, setProductInTheCart] = useState([]);
-  const [count, setCount] = useState(0);
 
-  const addProductCart = () => {
+  const addProductCart = (data) => {
     if (count > 0) {
-      setProductInTheCart(descriptionProduct);
+      setProductInTheCart(data);
+      console.log(productInTheCart);
     } else {
       console.log("Es igual a 0");
-    }
-  };
-
-  const addCount = () => {
-    setCount(count + 1);
-  };
-
-  const deleteCount = () => {
-    if (count > 0) {
-      setCount(count - 1);
-    } else {
-      setCount(count);
     }
   };
 
@@ -49,6 +40,7 @@ function App() {
         cartPanel={cartPanel}
         productInTheCart={productInTheCart}
         count={count}
+        descriptionProduct={descriptionProduct}
       />
 
       <Routes>

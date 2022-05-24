@@ -24,7 +24,7 @@ const DescriptionOneProduct = ({
         </section>
 
         <AddCartProduct
-          descriptionProduct={descriptionProduct}
+          data={descriptionProduct}
           count={count}
           addProductCart={addProductCart}
           addCount={addCount}

@@ -4,11 +4,10 @@ import { GrFormAdd } from 'react-icons/gr';
 import { AiOutlineMinus } from 'react-icons/ai';
 import { BsCartPlus } from 'react-icons/bs';
 
-const AddCartProduct = ({descriptionProduct, count, addProductCart, addCount, deleteCount}) => {
+const AddCartProduct = ({ count, addProductCart, addCount, deleteCount, data}) => {
 
-
-
-
+  
+  console.log(data)
   return (
       <>
         <section className='container_buttons_add'>
@@ -19,7 +18,7 @@ const AddCartProduct = ({descriptionProduct, count, addProductCart, addCount, de
             </section>
 
             <section>
-               <button onClick={addProductCart}>Add to Cart<BsCartPlus className='cart_plus'/></button>      
+               <button onClick={() => addProductCart(data)}>Add to Cart<BsCartPlus className='cart_plus'/></button>      
             </section>  
 
               

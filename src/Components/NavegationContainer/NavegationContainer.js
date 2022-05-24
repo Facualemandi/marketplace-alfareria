@@ -5,18 +5,20 @@ import ProductInTheCart from "../ProductInTheCart/ProductInTheCart";
 
 const NavegationContainer = ({ openCartPanel, cartPanel, productInTheCart, count }) => {
   // let objetProduct = Object.values(productInTheCart)
-  console.log(Object.values(productInTheCart))
+  console.log(productInTheCart)
 
   const valueProduct = Object.values(productInTheCart)
-  
-  console.log(productInTheCart)
+
+
   return (
     <>
      {cartPanel && 
-       <section className="panel_container">
+       <section className="panel_container">     
             <ProductInTheCart
               valueProduct={valueProduct}
               count={count}
+              productInTheCart={productInTheCart}
+            
             />
        </section>
      }
