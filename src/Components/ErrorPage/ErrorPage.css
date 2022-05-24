@@ -1,0 +1,20 @@
+.error{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60vw;
+    margin: auto;
+    margin-top: 50%;
+}
+
+.icon_error{
+    width: 100px;
+    height: 100px;
+    color: red;
+}
+
+.error p {
+    font-family: sans-serif;
+    font-size: 40px;
+}

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Route, Routes, useNavigate } from "react-router-dom";
 import ContainerUI from "./Components/AContainerUI/ContainerUI";
+import ErrorPage from "./Components/ErrorPage/ErrorPage";
 import DescriptionOneProduct from "./Components/FDescriptionOneProduct/DescriptionOneProduct";
 import NavegationContainer from "./Components/NavegationContainer/NavegationContainer";
 import { useCount } from "./Hooks/useCount";
@@ -75,12 +76,11 @@ function App() {
               openModal={openModal}
               setOpenModal={setOpenModal}
               onReturn={onReturn}
-            
-            
-        
+             
             />
           }
-        />
+          />
+          <Route path="/*" element={<ErrorPage/>}/>
       </Routes>
     </>
   );
