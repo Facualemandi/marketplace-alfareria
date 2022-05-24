@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import ContainerUI from "./Components/AContainerUI/ContainerUI";
-import CheckProduct from "./Components/CheckProduct/CheckProduct";
 import DescriptionOneProduct from "./Components/FDescriptionOneProduct/DescriptionOneProduct";
 import NavegationContainer from "./Components/NavegationContainer/NavegationContainer";
 import { useCount } from "./Hooks/useCount";
@@ -11,13 +10,14 @@ function App() {
   const [descriptionProduct, setDescriptionProduct] = useState([]);
   const [cartPanel, setCartPanel] = useState(false);
   const [productInTheCart, setProductInTheCart] = useState([]);
-  const [check, setCheck] = useState(false)
+  const [openModal, setOpenModal] = useState(false)
 
 
   const addProductCart = (data) => {
     if (count > 0) {
        setProductInTheCart([...productInTheCart, data]);
-       setCheck(true)
+       setOpenModal(true)
+  
     } else {
       console.log("Es igual a 0");
     }
@@ -59,7 +59,9 @@ function App() {
               count={count}
               addCount={addCount}
               deleteCount={deleteCount}
-              check={check}
+              openModal={openModal}
+              setOpenModal={setOpenModal}
+        
             />
           }
         />

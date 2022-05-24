@@ -1,7 +1,8 @@
 import React from "react";
-import CheckProduct from "../CheckProduct/CheckProduct";
 import AddCartProduct from "../GAddCartProduct/AddCartProduct";
+import ModalCheck from "../ModalCheck/ModalCheck";
 import "./DescriptionOneProduct.css";
+import IconModalCheck from "../IconModalCheck/IconModalCheck";
 
 const DescriptionOneProduct = ({
   descriptionProduct,
@@ -9,7 +10,8 @@ const DescriptionOneProduct = ({
   addProductCart,
   deleteCount,
   addCount,
-  check,
+  openModal,
+  setOpenModal,
 }) => {
   const { name, description, price, image } = descriptionProduct;
 
@@ -25,7 +27,10 @@ const DescriptionOneProduct = ({
           <p>{description}</p>
         </section>
 
-        {check && <CheckProduct/>}
+        {openModal && 
+        <ModalCheck > 
+               <IconModalCheck setOpenModal={setOpenModal}/>
+        </ModalCheck>}
 
         <AddCartProduct
           data={descriptionProduct}
