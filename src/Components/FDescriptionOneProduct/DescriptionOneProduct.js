@@ -1,4 +1,5 @@
 import React from "react";
+import CheckProduct from "../CheckProduct/CheckProduct";
 import AddCartProduct from "../GAddCartProduct/AddCartProduct";
 import "./DescriptionOneProduct.css";
 
@@ -8,6 +9,7 @@ const DescriptionOneProduct = ({
   addProductCart,
   deleteCount,
   addCount,
+  check,
 }) => {
   const { name, description, price, image } = descriptionProduct;
 
@@ -22,6 +24,8 @@ const DescriptionOneProduct = ({
           <span>${price}</span>
           <p>{description}</p>
         </section>
+
+        {check && <CheckProduct/>}
 
         <AddCartProduct
           data={descriptionProduct}

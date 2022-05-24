@@ -1,0 +1,29 @@
+.img_acumulation_product{
+    width: 60px;
+    height: 60px;
+    margin: 1vh;
+    border-radius: 10px;
+}
+
+.container_acumulation_procut{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1vh;
+    width: 85vw;
+    border: 1px solid rgb(197, 197, 197);
+    border-radius: 5px;
+}
+
+.section_acumularion_product{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+.count_acumulation{
+    color: rgb(73, 73, 73);
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 5px;
+    margin-right: 5px;
+}

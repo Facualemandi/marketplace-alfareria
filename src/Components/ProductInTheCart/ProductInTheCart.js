@@ -1,38 +1,36 @@
-import React from "react";
-import { BsCartX } from 'react-icons/bs';
+import React, { useState } from "react";
+import { BsCartX } from "react-icons/bs";
+import AcumulationOfProductCart from "../AcumulationOfProductCart/AcumulationOfProductCart";
 import "./ProductInTheCart.css";
 
 const ProductInTheCart = ({ valueProduct, count, productInTheCart }) => {
   const totalValue = valueProduct[2] * count;
-  console.log(productInTheCart);
 
   const productValue = Object.values(productInTheCart);
 
   const asd = () => {
     console.log(productValue);
+    console.log(valueProduct);
   };
 
   return (
     <>
-      {/* {!productInTheCart && <p> Hola</p> } */}
-      {productValue.length > 0 ? (
-        <section className="contaianer_product_cart">
-          <img
-            className="img_product_cart"
-            alt={valueProduct[1]}
-            src={valueProduct[4]}
-          />
-
-          <section className="description_product_cart">
-            <p>{valueProduct[1]}</p>
-            <span className="dsad">${valueProduct[2]}</span>
-            <p> total: ${totalValue} </p>
-          </section>
-
-          <span className="count_product_cart">x{count}</span>
-        </section>
+      {!productValue.length ? (
+        <p className="no_product">
+          Empty cart <BsCartX className="icon_cry" />
+        </p>
       ) : (
-        <p onClick={asd} className='no_product'> Empty cart <BsCartX className="icon_cry"/> </p>
+        productValue.map((el) => (
+          <AcumulationOfProductCart
+            key={el.id}
+            asd={asd}
+            name={el.name}
+            image={el.image}
+            price={el.price}
+            count={count}
+            productValue={productValue}
+          />
+        ))
       )}
     </>
   );

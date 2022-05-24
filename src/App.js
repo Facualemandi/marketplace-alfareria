@@ -1,21 +1,23 @@
 import { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import ContainerUI from "./Components/AContainerUI/ContainerUI";
+import CheckProduct from "./Components/CheckProduct/CheckProduct";
 import DescriptionOneProduct from "./Components/FDescriptionOneProduct/DescriptionOneProduct";
 import NavegationContainer from "./Components/NavegationContainer/NavegationContainer";
 import { useCount } from "./Hooks/useCount";
 
 function App() {
   const { count, addCount, deleteCount, setCount } = useCount();
-
   const [descriptionProduct, setDescriptionProduct] = useState([]);
   const [cartPanel, setCartPanel] = useState(false);
   const [productInTheCart, setProductInTheCart] = useState([]);
+  const [check, setCheck] = useState(false)
+
 
   const addProductCart = (data) => {
     if (count > 0) {
-      setProductInTheCart(data);
-      console.log(productInTheCart);
+       setProductInTheCart([...productInTheCart, data]);
+       setCheck(true)
     } else {
       console.log("Es igual a 0");
     }
@@ -33,6 +35,8 @@ function App() {
     }
   };
 
+
+
   return (
     <>
       <NavegationContainer
@@ -41,6 +45,7 @@ function App() {
         productInTheCart={productInTheCart}
         count={count}
         descriptionProduct={descriptionProduct}
+
       />
 
       <Routes>
@@ -54,6 +59,7 @@ function App() {
               count={count}
               addCount={addCount}
               deleteCount={deleteCount}
+              check={check}
             />
           }
         />
