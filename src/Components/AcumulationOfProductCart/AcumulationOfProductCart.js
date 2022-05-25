@@ -11,20 +11,13 @@ const AcumulationOfProductCart = ({
   newCount,
   productInTheCart,
   newElementInCart,
-  
-}) =>
-    
+}) => {
 
-{
+  console.log(newElementInCart)
 
-    console.log(newElementInCart)
-      newElementInCart.forEach(element => {
-        console.log(element.amount)
-    })
+ const mapped = Object.keys()
 
-
-      
-     const totalValue = newCount * price;
+  const totalValue = newCount * price;
 
   return (
     <>
@@ -37,9 +30,7 @@ const AcumulationOfProductCart = ({
           <p className="total_acumulation">Total: ${totalValue}.00</p>
         </section>
 
-        <p className="count_acumulation">x0</p>
-
-
+        <p className="count_acumulation">x{}</p>
 
         <RiDeleteBin6Line
           onClick={() => deleteObj(id)}

@@ -15,7 +15,7 @@ function App() {
   const [openModal, setOpenModal] = useState(false);
   const [newCount, setNewCount] = useState(0);
   const [newId, setNewId] = useState();
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(0); 
   const [newElementInCart, setNewElementInCart] = useState([]);
 
   const addProductCart = (data, id) => {
