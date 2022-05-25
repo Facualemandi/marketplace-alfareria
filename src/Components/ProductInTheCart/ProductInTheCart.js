@@ -9,6 +9,7 @@ const ProductInTheCart = ({
   productInTheCart,
   setProductInTheCart,
   newCount,
+  newElementInCart,
 }) => {
 
   
@@ -41,6 +42,7 @@ const ProductInTheCart = ({
             deleteObj={deleteObj}
             productInTheCart={productInTheCart}
             newCount={newCount}
+            newElementInCart={newElementInCart}
           />
         ))
       

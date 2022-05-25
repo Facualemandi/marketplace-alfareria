@@ -6,7 +6,6 @@ const WhatsApp = ({productInTheCart}) => {
 
       const {name,count,} = productInTheCart
 
-      console.log(productInTheCart)
   return (
     <>
       <section className="section_whatsapp">

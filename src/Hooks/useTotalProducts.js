@@ -64,7 +64,7 @@ const bazar = [
     amount: 0,
   },
   {
-    id: 60,
+    id: 6,
     name: "(Set) 5 Tazas - 5 Platos",
     price: "890.00",
     description:

@@ -14,7 +14,9 @@ const DescriptionOneProduct = ({
   setOpenModal,
   onReturn,
 }) => {
-  const { name, description, price, image } = descriptionProduct;
+  const { name, description, price, image, id} = descriptionProduct;
+
+  // console.log(descriptionProduct)
 
   return (
     <>
