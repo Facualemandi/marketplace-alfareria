@@ -4,25 +4,52 @@ import ContainerUI from "./Components/AContainerUI/ContainerUI";
 import ErrorPage from "./Components/ErrorPage/ErrorPage";
 import DescriptionOneProduct from "./Components/FDescriptionOneProduct/DescriptionOneProduct";
 import NavegationContainer from "./Components/NavegationContainer/NavegationContainer";
-import { useCount } from "./Hooks/useCount";
-import { useTotalState } from "./Hooks/useTotalState";
 import Loader from "./Loader/Loader";
 
 function App() {
   const [loader, setLoader] = useState(true);
-  const { count, addCount, deleteCount } = useCount();
-  const {
-    setOpenModal,
-    setProductInTheCart,
-    productInTheCart,
-    cartPanel,
-    descriptionProduct,
-    openModal,
-    newCount,
-    addProductCart,
-    seeProduct,
-    openCartPanel,
-  } = useTotalState();
+
+  const [descriptionProduct, setDescriptionProduct] = useState([]);
+  const [cartPanel, setCartPanel] = useState(false);
+  const [productInTheCart, setProductInTheCart] = useState([]);
+  const [openModal, setOpenModal] = useState(false);
+  const [newCount, setNewCount] = useState([]);
+
+  const [count, setCount] = useState(0);
+
+  const addCount = () => {
+    setCount(count + 1);
+  };
+
+  const deleteCount = () => {
+    if (count > 0) {
+      setCount(count - 1);
+    } else {
+      setCount(count);
+    }
+  };
+
+  const addProductCart = (data, count) => {
+    if (count > 0) {
+      setProductInTheCart([...productInTheCart, data]);
+      setNewCount(count);
+      setOpenModal(true);
+      setCount(0);
+    } else {
+    }
+  };
+
+  const seeProduct = (el) => {
+    setDescriptionProduct(el);
+  };
+
+  const openCartPanel = () => {
+    if (!cartPanel) {
+      setCartPanel(true);
+    } else {
+      setCartPanel(false);
+    }
+  };
 
   const nav = useNavigate();
   const onReturn = () => {
