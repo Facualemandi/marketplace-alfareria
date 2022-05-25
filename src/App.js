@@ -17,6 +17,19 @@ function App() {
 
   const [count, setCount] = useState(0);
 
+  const addProductCart = (data, count) => {
+    if (count > 0) {
+      setProductInTheCart([...productInTheCart, data]);
+      setNewCount(count);
+      setOpenModal(true);
+      setCount(0);
+      console.log(productInTheCart)
+    } 
+  };
+
+
+
+
   const addCount = () => {
     setCount(count + 1);
   };
@@ -26,16 +39,6 @@ function App() {
       setCount(count - 1);
     } else {
       setCount(count);
-    }
-  };
-
-  const addProductCart = (data, count) => {
-    if (count > 0) {
-      setProductInTheCart([...productInTheCart, data]);
-      setNewCount(count);
-      setOpenModal(true);
-      setCount(0);
-    } else {
     }
   };
 

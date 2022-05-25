@@ -11,7 +11,6 @@ const AcumulationOfProductCart = ({
   newCount,
 }) => {
   const totalValue = newCount * price;
-  console.log(totalValue);
 
   return (
     <>

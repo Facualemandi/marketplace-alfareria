@@ -6,10 +6,6 @@ import { BsCartPlus } from 'react-icons/bs';
 
 const AddCartProduct = ({ count, addProductCart, addCount, deleteCount, data, onReturn}) => {
 
-     
-
-  
-  console.log(data)
   return (
       <>
         <section className='container_buttons_add'>
