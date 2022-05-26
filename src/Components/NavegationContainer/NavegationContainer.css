@@ -20,7 +20,7 @@
   height: 35px;
 }
 
-.cart_vanegation_container.is-active{
+.cart_vanegation_container.is-active {
   color: green;
 }
 
@@ -66,6 +66,19 @@
   color: green;
 }
 
-.cart_active{
+.cart_active {
   color: green;
+}
+
+.icon_heart {
+  color: rgb(104, 104, 104);
+  width: 30px;
+  height: 30px;
+  margin-right: 30px;
+}
+
+.section_icon_heart {
+  color: rgb(104, 104, 104);
+  font-family: sans-serif;
+  font-size: 14px;
 }

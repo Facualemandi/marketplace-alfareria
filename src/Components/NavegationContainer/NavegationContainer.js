@@ -1,6 +1,7 @@
 import React from "react";
 import "./NavegationContainer.css";
 import { GiShoppingCart } from "react-icons/gi";
+import { BsSuitHeart } from "react-icons/bs";
 import ProductInTheCart from "../ProductInTheCart/ProductInTheCart";
 
 const NavegationContainer = ({
@@ -32,6 +33,13 @@ const NavegationContainer = ({
       
 
       <nav className="nav_conatiner_cart">
+
+          <section className="section_icon_heart">
+                   <BsSuitHeart className="icon_heart"/>
+                   <p> Like </p>
+          </section>
+
+
         <section onClick={openCartPanel} className="section_iconcart_number">
           <section>
             <GiShoppingCart
