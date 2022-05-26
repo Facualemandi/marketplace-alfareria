@@ -34,11 +34,8 @@ function App() {
     });
   }, [productInTheCart]);
   
+  console.log(productInTheCart)
   
-  
-
-
-
 
 
 
@@ -81,7 +78,6 @@ function App() {
   return (
     <>
       {loader && <Loader />}
-
       <NavegationContainer
         openCartPanel={openCartPanel}
         cartPanel={cartPanel}
@@ -113,6 +109,7 @@ function App() {
           <Route path="/*" element={<ErrorPage />} />
         </Routes>
       )}
+      
     </>
   );
 }

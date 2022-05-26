@@ -38,6 +38,7 @@ const ProductInTheCart = ({
             image={el.image}
             price={el.price}
             count={count}
+            amount={el.amount}
             productValue={productValue}
             deleteObj={deleteObj}
             productInTheCart={productInTheCart}

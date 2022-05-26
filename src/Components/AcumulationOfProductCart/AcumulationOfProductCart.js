@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import "./AcumulationOfProductCart.css";
 import { RiDeleteBin6Line } from "react-icons/ri";
 
@@ -9,12 +8,10 @@ const AcumulationOfProductCart = ({
   price,
   id,
   newCount,
-  productInTheCart,
-
+  amount,
 }) => {
 
-console.log(productInTheCart)
-
+ 
 
   const totalValue = newCount * price;
 
@@ -29,14 +26,15 @@ console.log(productInTheCart)
           <p className="total_acumulation">Total: ${totalValue}.00</p>
         </section>
 
-        <p className="count_acumulation">x{}</p>
+        <p className="count_acumulation">x{amount}</p>
 
         <RiDeleteBin6Line
           onClick={() => deleteObj(id)}
           className="icon_delete_cart"
         />
       </section>
-      
+
+     
     </>
   );
 };
