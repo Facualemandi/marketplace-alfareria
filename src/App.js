@@ -4,10 +4,13 @@ import ContainerUI from "./Components/AContainerUI/ContainerUI";
 import ErrorPage from "./Components/ErrorPage/ErrorPage";
 import DescriptionOneProduct from "./Components/FDescriptionOneProduct/DescriptionOneProduct";
 import NavegationContainer from "./Components/NavegationContainer/NavegationContainer";
+import { useAddDelete } from "./Hooks/useAddDelete";
 import Loader from "./Loader/Loader";
 
 function App() {
   const [loader, setLoader] = useState(true);
+  const {count, addCount, deleteCount, setCount} = useAddDelete()
+
 
   const [descriptionProduct, setDescriptionProduct] = useState([]);
   const [cartPanel, setCartPanel] = useState(false);
@@ -15,13 +18,13 @@ function App() {
   const [openModal, setOpenModal] = useState(false);
   const [newCount, setNewCount] = useState(0);
   const [newId, setNewId] = useState();
-  const [count, setCount] = useState(0); 
 
   const addProductCart = (data, id) => {
     if (count > 0) {
       setProductInTheCart([...productInTheCart, data]);
       setOpenModal(true);
       setNewId(id);
+
     }
   };
 
@@ -30,25 +33,12 @@ function App() {
       if (obj.id === newId) {
         obj.amount = count;
         setNewCount(obj.amount);
+        setCount(0)
       }
     });
   }, [productInTheCart]);
   
-  console.log(productInTheCart)
-  
 
-
-  const addCount = () => {
-    setCount(count + 1);
-  };
-
-  const deleteCount = () => {
-    if (count > 0) {
-      setCount(count - 1);
-    } else {
-      setCount(count);
-    }
-  };
 
   const seeProduct = (el) => {
     setDescriptionProduct(el);
@@ -77,6 +67,7 @@ function App() {
   return (
     <>
       {loader && <Loader />}
+
       <NavegationContainer
         openCartPanel={openCartPanel}
         cartPanel={cartPanel}
@@ -109,6 +100,7 @@ function App() {
         </Routes>
       )}
       
+     
     </>
   );
 }
