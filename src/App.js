@@ -5,15 +5,15 @@ import ErrorPage from "./Components/ErrorPage/ErrorPage";
 import DescriptionOneProduct from "./Components/FDescriptionOneProduct/DescriptionOneProduct";
 import NavegationContainer from "./Components/NavegationContainer/NavegationContainer";
 import { useAddDelete } from "./Hooks/useAddDelete";
+import { useLoader } from "./Hooks/useLoader";
+import { useOpenCartPanel } from "./Hooks/useOpenCartPanel";
 import Loader from "./Loader/Loader";
 
 function App() {
-  const [loader, setLoader] = useState(true);
-  const {count, addCount, deleteCount, setCount} = useAddDelete()
-
-
+  const { count, addCount, deleteCount, setCount } = useAddDelete();
+  const { cartPanel, openCartPanel } = useOpenCartPanel();
+  const {loader} = useLoader()
   const [descriptionProduct, setDescriptionProduct] = useState([]);
-  const [cartPanel, setCartPanel] = useState(false);
   const [productInTheCart, setProductInTheCart] = useState([]);
   const [openModal, setOpenModal] = useState(false);
   const [newCount, setNewCount] = useState(0);
@@ -24,32 +24,20 @@ function App() {
       setProductInTheCart([...productInTheCart, data]);
       setOpenModal(true);
       setNewId(id);
-
     }
   };
-
   useEffect(() => {
     productInTheCart.find((obj) => {
       if (obj.id === newId) {
         obj.amount = count;
         setNewCount(obj.amount);
-        setCount(0)
+        setCount(0);
       }
     });
   }, [productInTheCart]);
-  
-
 
   const seeProduct = (el) => {
     setDescriptionProduct(el);
-  };
-
-  const openCartPanel = () => {
-    if (!cartPanel) {
-      setCartPanel(true);
-    } else {
-      setCartPanel(false);
-    }
   };
 
   const nav = useNavigate();
@@ -57,12 +45,8 @@ function App() {
     nav("/");
   };
 
-  function loaderFalse() {
-    setTimeout(() => {
-      setLoader(false);
-    }, 1500);
-  }
-  loaderFalse();
+
+
 
   return (
     <>
@@ -99,8 +83,6 @@ function App() {
           <Route path="/*" element={<ErrorPage />} />
         </Routes>
       )}
-      
-     
     </>
   );
 }

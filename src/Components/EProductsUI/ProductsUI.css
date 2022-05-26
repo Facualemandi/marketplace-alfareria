@@ -1,18 +1,18 @@
 .container_prodcts_ui {
   margin: 1vh;
-  margin-top: 3vh;
+  margin-top: 2vh;
   cursor: pointer;
   transition: 1s;
-  background-color: rgb(243, 250, 253);
+  background-color: #EFFFFD;
   box-shadow: 1px 1px 2px 1px rgb(235, 235, 235);
-  border-radius: 15px;
+  border-radius: 5px;
   padding: 5px;
   
 }
 
 .container_prodcts_ui.is-active{
     border-radius: 15px;
-    background-color: rgb(255, 249, 220);
+    background-color: #c2f2ef;
     box-shadow: 1px 1px 3px 1px rgb(228, 228, 228);
     padding: 5px;
     transition: 0.5s;
@@ -30,14 +30,14 @@
 }
 
 .section_description_product p {
-  font-family: sans-serif;
-  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
   color: grey;
 }
 .section_description_product span {
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
-  color: rgb(0, 124, 41);
+  color: rgb(13, 144, 57);
 }
 
 .more_product{

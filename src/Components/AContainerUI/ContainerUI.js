@@ -6,7 +6,7 @@ import Search from "../CSearchUI/Search";
 import ProductsUI from "../EProductsUI/ProductsUI";
 import "./ContainerUI.css";
 
-const ContainerUI = ({seeProduct}) => {
+const ContainerUI = ({seeProduct, categories}) => {
   const [items] = useTotalProducts();
   const {  search,  setSearch, newBazar } = useSearch()
   
@@ -20,7 +20,7 @@ const ContainerUI = ({seeProduct}) => {
   return (
     <>
       <Logo />
-      <Search search={search} handleSearch={handleSearch}/>
+      <Search search={search} handleSearch={handleSearch} categories={categories}/>
 
       <main className="main">
         {newBazar.map((el) => (

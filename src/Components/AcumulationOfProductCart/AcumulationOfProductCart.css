@@ -16,11 +16,12 @@
 }
 
 .section_acumularion_product{
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
 }
 
 .total_acumulation{
+    font-family: 'Montserrat', sans-serif;
     font-weight: bold;
 }
 
