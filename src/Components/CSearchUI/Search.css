@@ -14,12 +14,12 @@
   align-items: center;
   padding: 5px;
   border-radius: 5px;
-  background-color: rgb(235, 235, 235);
-  box-shadow: 1px 1px 2px 1px rgb(226, 226, 226);
+  background-color: rgb(243, 243, 243);
+  box-shadow: 1px 1px 2px 1px rgb(243, 243, 243);
 }
 
 .section_search input {
   height: 30px;
   border: none;
-  background-color: rgb(235, 235, 235);
+  background-color: rgb(243, 243, 243);
 }

@@ -21,9 +21,12 @@
 
 
 .img_producs_ui {
-  width: 100%;
-  height: 150px;
+  width: 95%;
+  height: 120px;
   border-radius: 5px;
+  display: flex;
+  margin: auto;
+  margin-bottom: 10px;
 }
 
 .section_description_product p {
