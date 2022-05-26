@@ -10,7 +10,6 @@ const NavegationContainer = ({
   count,
   setProductInTheCart,
   newCount,
-  newElementInCart,
 }) => {
   // let objetProduct = Object.values(productInTheCart)
 
@@ -26,7 +25,6 @@ const NavegationContainer = ({
             productInTheCart={productInTheCart}
             setProductInTheCart={setProductInTheCart}
             newCount={newCount}
-            newElementInCart={newElementInCart}
           />
         </section>
       )}
@@ -39,7 +37,14 @@ const NavegationContainer = ({
                 productInTheCart.length > 0 && "is-active"
               }`}
             />
-            <p className={` cart_navegation_nav ${productInTheCart.length > 0 && 'cart_active'}`}> Cart </p>
+            <p
+              className={` cart_navegation_nav ${
+                productInTheCart.length > 0 && "cart_active"
+              }`}
+            >
+              {" "}
+              Cart{" "}
+            </p>
           </section>
           <span
             className={`number_cart ${

@@ -16,7 +16,6 @@ function App() {
   const [newCount, setNewCount] = useState(0);
   const [newId, setNewId] = useState();
   const [count, setCount] = useState(0); 
-  const [newElementInCart, setNewElementInCart] = useState([]);
 
   const addProductCart = (data, id) => {
     if (count > 0) {
@@ -31,7 +30,6 @@ function App() {
       if (obj.id === newId) {
         obj.amount = count;
         setNewCount(obj.amount);
-        setNewElementInCart([...newElementInCart, obj]);
       }
     });
   }, [productInTheCart]);
@@ -92,7 +90,6 @@ function App() {
         count={count}
         descriptionProduct={descriptionProduct}
         newCount={newCount}
-        newElementInCart={newElementInCart}
       />
 
       {!loader && (

@@ -10,12 +10,11 @@ const AcumulationOfProductCart = ({
   id,
   newCount,
   productInTheCart,
-  newElementInCart,
+
 }) => {
 
-  console.log(newElementInCart)
+console.log(productInTheCart)
 
- const mapped = Object.keys()
 
   const totalValue = newCount * price;
 
@@ -37,6 +36,7 @@ const AcumulationOfProductCart = ({
           className="icon_delete_cart"
         />
       </section>
+      
     </>
   );
 };
