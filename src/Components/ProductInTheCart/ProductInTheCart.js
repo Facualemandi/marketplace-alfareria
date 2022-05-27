@@ -23,6 +23,9 @@ const ProductInTheCart = ({
     setProductInTheCart(newObj);
   };
 
+   console.log(productInTheCart)
+
+
   return (
     <>
       {!productValue.length ? (

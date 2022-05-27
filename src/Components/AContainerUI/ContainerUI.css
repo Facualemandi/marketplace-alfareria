@@ -1,3 +1,6 @@
+.main{
+    margin-bottom: 10vh;
+}
 .section_product_continer_ui{
     display: grid;
     grid-template-columns: repeat(2, 1fr);

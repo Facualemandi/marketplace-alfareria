@@ -38,7 +38,7 @@
 
 .categories li {
   border-radius: 30px;
-  padding: 4px;
+  padding: 6px;
   margin-right: 10px;
   border: 1px solid grey;
 }
@@ -50,14 +50,14 @@
   font-weight: bold;
 }
 .tazas_active {
-  background-color: rgb(175, 232, 247);
+  background-color: rgb(195, 222, 249);
   box-shadow: 1px 1px 2px 1px rgb(198, 222, 246);
   border: 1px solid rgb(168, 217, 246) !important;
   font-weight: bold;
 }
 .bowls_active {
-  background-color: rgb(175, 232, 247);
+  background-color: rgb(195, 222, 249);
   box-shadow: 1px 1px 2px 1px rgb(198, 222, 246);
-   border: 1px solid rgb(168, 217, 246) !important;
+  border: 1px solid rgb(168, 217, 246) !important;
    font-weight: bold;
 }
