@@ -9,6 +9,7 @@ import Platos from "../CategoriesProducts/Platos";
 import CategoriesProducts from "../CategoriesProducts/Platos";
 import Tazas from "../CategoriesProducts/Tazas";
 import Search from "../CSearchUI/Search";
+import Menu from "../DMenuUI/Menu";
 import ProductsUI from "../EProductsUI/ProductsUI";
 import "./ContainerUI.css";
 
