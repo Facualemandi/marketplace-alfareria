@@ -1,35 +1,34 @@
 import React from "react";
 import { BsSearch } from "react-icons/bs";
-import { useNavigate } from "react-router-dom";
 import Menu from "../DMenuUI/Menu";
-import './Search.css'
+import "./Search.css";
 
-const Search = ({search, handleSearch, categories}) => {
-
-
+const Search = ({ search, handleSearch, handleBowls, handlePlatos,handleTazas }) => {
 
 
   return (
     <>
-    
       <section className="container_search">
         <section className="section_search">
-          <input type={"text"} placeholder="Tazas, Plato, Bowls...etc" value={search} onChange={handleSearch}/>
-           <BsSearch/>
+          <input
+            type={"text"}
+            placeholder="Tazas, Plato, Bowls...etc"
+            value={search}
+            onChange={handleSearch}
+          />
+          <BsSearch />
         </section>
-           
-           <section>
-                <Menu/>
-           </section>
-        
+
+        <section>
+          <Menu />
+        </section>
       </section>
 
-       <ul className="categories">
-         <li >Platos</li>
-         <li>Tazas</li>
-         <li>Bowls</li>
-       </ul>
-
+      <ul className="categories">
+        <li onClick={handlePlatos}>Platos</li>
+        <li onClick={handleTazas}>Tazas</li>
+        <li onClick={handleBowls}>Bowls</li>
+      </ul>
     </>
   );
 };

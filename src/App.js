@@ -4,20 +4,26 @@ import ContainerUI from "./Components/AContainerUI/ContainerUI";
 import ErrorPage from "./Components/ErrorPage/ErrorPage";
 import DescriptionOneProduct from "./Components/FDescriptionOneProduct/DescriptionOneProduct";
 import NavegationContainer from "./Components/NavegationContainer/NavegationContainer";
+import Platos from "./Components/CategoriesProducts/Platos";
 import { useAddDelete } from "./Hooks/useAddDelete";
 import { useLoader } from "./Hooks/useLoader";
 import { useOpenCartPanel } from "./Hooks/useOpenCartPanel";
 import Loader from "./Loader/Loader";
+import CategoriesProducts from "./Components/CategoriesProducts/Platos";
 
 function App() {
   const { count, addCount, deleteCount, setCount } = useAddDelete();
   const { cartPanel, openCartPanel } = useOpenCartPanel();
-  const {loader} = useLoader()
+  const { loader } = useLoader();
   const [descriptionProduct, setDescriptionProduct] = useState([]);
   const [productInTheCart, setProductInTheCart] = useState([]);
   const [openModal, setOpenModal] = useState(false);
   const [newCount, setNewCount] = useState(0);
   const [newId, setNewId] = useState();
+
+
+
+
 
   const addProductCart = (data, id) => {
     if (count > 0) {
@@ -44,9 +50,6 @@ function App() {
   const onReturn = () => {
     nav("/");
   };
-
-
-
 
   return (
     <>
@@ -80,7 +83,6 @@ function App() {
               />
             }
           />
-          <Route path="/*" element={<ErrorPage />} />
         </Routes>
       )}
     </>
