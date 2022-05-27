@@ -3,7 +3,7 @@ import { BsSearch } from "react-icons/bs";
 import Menu from "../DMenuUI/Menu";
 import "./Search.css";
 
-const Search = ({ search, handleSearch, handleBowls, handlePlatos,handleTazas }) => {
+const Search = ({ search, handleSearch, handleBowls, handlePlatos,handleTazas, platos, tazas, bowls }) => {
 
 
   return (
@@ -25,9 +25,9 @@ const Search = ({ search, handleSearch, handleBowls, handlePlatos,handleTazas })
       </section>
 
       <ul className="categories">
-        <li onClick={handlePlatos}>Platos</li>
-        <li onClick={handleTazas}>Tazas</li>
-        <li onClick={handleBowls}>Bowls</li>
+        <li onClick={handlePlatos} className={`${platos && 'platos_active'}`}>Platos</li>
+        <li onClick={handleTazas} className={`${tazas && 'tazas_active'}`}>Tazas</li>
+        <li onClick={handleBowls} className={`${bowls && 'bowls_active'}`}>Bowls</li>
       </ul>
     </>
   );

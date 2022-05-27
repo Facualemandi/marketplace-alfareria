@@ -37,6 +37,9 @@ const ContainerUI = ({ seeProduct, categories }) => {
         handleBowls={handleBowls}
         handlePlatos={handlePlatos}
         handleTazas={handleTazas}
+        platos={platos}
+        tazas={tazas}
+        bowls={bowls}
       />
       <main className="main">
         {!platos && !tazas && !bowls && (
