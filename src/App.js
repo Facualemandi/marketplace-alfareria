@@ -1,10 +1,8 @@
 import { useEffect, useState } from "react";
 import { Route, Routes, useNavigate } from "react-router-dom";
 import ContainerUI from "./Components/AContainerUI/ContainerUI";
-import ErrorPage from "./Components/ErrorPage/ErrorPage";
 import DescriptionOneProduct from "./Components/FDescriptionOneProduct/DescriptionOneProduct";
 import NavegationContainer from "./Components/NavegationContainer/NavegationContainer";
-import Platos from "./Components/CategoriesProducts/Platos";
 import { useAddDelete } from "./Hooks/useAddDelete";
 import { useLoader } from "./Hooks/useLoader";
 import { useOpenCartPanel } from "./Hooks/useOpenCartPanel";
@@ -19,15 +17,11 @@ function App() {
   const [openModal, setOpenModal] = useState(false);
   const [newCount, setNewCount] = useState(0);
   const [newId, setNewId] = useState();
-  const [openCountIcon, setOpenCountIcon] = useState(false)
-
-  
-
-
 
   const addProductCart = (data, id) => {
     if (count > 0) {
       setProductInTheCart([...productInTheCart, data]);
+      console.log('asd')
       setOpenModal(true);
       setNewId(id);
     }
@@ -51,9 +45,6 @@ function App() {
     nav("/");
   };
 
-
-
-
   return (
     <>
       {loader && <Loader />}
@@ -70,7 +61,20 @@ function App() {
 
       {!loader && (
         <Routes>
-          <Route path="/" element={<ContainerUI seeProduct={seeProduct}/>} />
+          <Route
+            path="/"
+            element={
+              <ContainerUI
+                seeProduct={seeProduct}
+                addProductCart={addProductCart}
+                descriptionProduct={descriptionProduct}
+                count={count}
+                addCount={addCount}
+                deleteCount={deleteCount}
+                
+              />
+            }
+          />
           <Route
             path="/description/:name"
             element={

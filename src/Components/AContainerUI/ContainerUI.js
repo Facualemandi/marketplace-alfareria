@@ -1,19 +1,16 @@
-import React, { useState } from "react";
-import { NavLink, Route, Routes } from "react-router-dom";
+import React  from "react";
 import { useCategories } from "../../Hooks/useCategories";
 import { useSearch } from "../../Hooks/useSearch";
 import { useTotalProducts } from "../../Hooks/useTotalProducts";
 import Logo from "../BLogoUI/Logo";
 import Bowls from "../CategoriesProducts/Bowls";
 import Platos from "../CategoriesProducts/Platos";
-import CategoriesProducts from "../CategoriesProducts/Platos";
 import Tazas from "../CategoriesProducts/Tazas";
 import Search from "../CSearchUI/Search";
-import Menu from "../DMenuUI/Menu";
 import ProductsUI from "../EProductsUI/ProductsUI";
 import "./ContainerUI.css";
 
-const ContainerUI = ({ seeProduct, categories, darkMode }) => {
+const ContainerUI = ({ seeProduct, categories, count, addProductCart, descriptionProduct, addCount, deleteCount}) => {
   const [items] = useTotalProducts();
   const { search, setSearch, newBazar } = useSearch();
 
@@ -54,6 +51,11 @@ const ContainerUI = ({ seeProduct, categories, darkMode }) => {
                 seeProduct={seeProduct}
                 el={el}
                 size={el.size}
+                count={count}
+                addProductCart={addProductCart}
+                data={descriptionProduct}
+                addCount={addCount}
+                deleteCount={deleteCount}
 
               />
             ))}

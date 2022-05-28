@@ -102,6 +102,7 @@ const bazar = [
     id: 9,
     name: "(Set) 2 Tazas - 5 Platos ondos",
     price: "450.00",
+    size:'7cm x 12cm',
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
     image: `${ceramica9}`,
@@ -121,6 +122,7 @@ const bazar = [
     id: 11,
     name: "Taza + Plato para café",
     price: "150.00",
+    size:'7cm x 12cm',
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
     image: `${ceramica11}`,
