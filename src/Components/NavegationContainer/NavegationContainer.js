@@ -1,6 +1,8 @@
 import React from "react";
 import "./NavegationContainer.css";
 import { GiShoppingCart } from "react-icons/gi";
+import { MdOutlineDarkMode } from "react-icons/md";
+import { BsSun } from "react-icons/bs";
 import ProductInTheCart from "../ProductInTheCart/ProductInTheCart";
 
 const NavegationContainer = ({
@@ -29,11 +31,7 @@ const NavegationContainer = ({
         </section>
       )}
 
-      
-
       <nav className="nav_conatiner_cart">
-
-
         <section onClick={openCartPanel} className="section_iconcart_number">
           <section>
             <GiShoppingCart

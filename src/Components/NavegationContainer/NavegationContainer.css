@@ -82,3 +82,9 @@
   font-family: sans-serif;
   font-size: 14px;
 }
+.icon_darkmode{
+  width: 30px;
+  height: 30px;
+  color: grey;
+  margin-right: 5vh;
+}

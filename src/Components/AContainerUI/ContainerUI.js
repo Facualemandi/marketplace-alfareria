@@ -13,7 +13,7 @@ import Menu from "../DMenuUI/Menu";
 import ProductsUI from "../EProductsUI/ProductsUI";
 import "./ContainerUI.css";
 
-const ContainerUI = ({ seeProduct, categories }) => {
+const ContainerUI = ({ seeProduct, categories, darkMode }) => {
   const [items] = useTotalProducts();
   const { search, setSearch, newBazar } = useSearch();
 
@@ -42,7 +42,7 @@ const ContainerUI = ({ seeProduct, categories }) => {
         tazas={tazas}
         bowls={bowls}
       />
-      <main className="main">
+      <main className='main'>
         {!platos && !tazas && !bowls && (
           <section className="section_product_continer_ui">
             {newBazar.map((el) => (
@@ -53,6 +53,8 @@ const ContainerUI = ({ seeProduct, categories }) => {
                 price={el.price}
                 seeProduct={seeProduct}
                 el={el}
+                size={el.size}
+
               />
             ))}
           </section>

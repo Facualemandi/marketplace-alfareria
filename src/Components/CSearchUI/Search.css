@@ -2,13 +2,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 90vw;
+  width: 100vw;
   margin: auto;
   margin-top: 3vh;
 }
 
 .section_search {
   width: 90vw;
+  margin: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -25,7 +26,7 @@
 }
 
 .categories {
-  width: 90vw;
+  width: 100vw;
   list-style: none;
   display: flex;
   justify-content: flex-start;
@@ -33,14 +34,16 @@
   font-family: "Montserrat", sans-serif;
   font-size: 12px;
   margin: auto;
-  margin-top: 15px;
+  padding-top: 15px;
 }
+
 
 .categories li {
   border-radius: 30px;
   padding: 6px;
   margin-right: 10px;
   border: 1px solid grey;
+  margin-left: 15px;
 }
 
 .platos_active {

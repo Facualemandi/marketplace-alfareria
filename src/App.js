@@ -9,7 +9,6 @@ import { useAddDelete } from "./Hooks/useAddDelete";
 import { useLoader } from "./Hooks/useLoader";
 import { useOpenCartPanel } from "./Hooks/useOpenCartPanel";
 import Loader from "./Loader/Loader";
-import CategoriesProducts from "./Components/CategoriesProducts/Platos";
 
 function App() {
   const { count, addCount, deleteCount, setCount } = useAddDelete();
@@ -20,8 +19,6 @@ function App() {
   const [openModal, setOpenModal] = useState(false);
   const [newCount, setNewCount] = useState(0);
   const [newId, setNewId] = useState();
-
-
 
 
 
@@ -51,6 +48,9 @@ function App() {
     nav("/");
   };
 
+
+
+
   return (
     <>
       {loader && <Loader />}
@@ -67,7 +67,7 @@ function App() {
 
       {!loader && (
         <Routes>
-          <Route path="/" element={<ContainerUI seeProduct={seeProduct} />} />
+          <Route path="/" element={<ContainerUI seeProduct={seeProduct}/>} />
           <Route
             path="/description/:name"
             element={
