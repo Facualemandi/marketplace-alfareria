@@ -1,19 +1,35 @@
-.scontainer_Menu_lateral{
-    width: 50vw;
-    position: absolute;
-    right: 0px;
-    top: 0px;
-    height: 100%;
-    background-color: white;
+.scontainer_Menu_lateral {
+  width: 50vw;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  height: 100%;
+  background-color: white;
+  right: -240px;
+  transition: 0.5s;
 }
 
-.ul_menu_lateral{
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    margin-top: 10vh;
+.scontainer_Menu_lateral.is-active {
+  right: 0px;
+  transition: 0.5s;
+}
+
+.ul_menu_lateral {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10vh;
 }
 .ul_menu_lateral li {
-    margin: 8px;
-    padding: 8px;
+  margin: 8px;
+  padding: 8px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  border: 1px solid rgb(232, 232, 232);
+  border-radius: 5px;
+}
+.icon_menu_lateral {
+  margin-right: 10px;
 }
