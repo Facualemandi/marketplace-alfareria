@@ -8,6 +8,7 @@
   width: 100vw;
   height: 70px;
   background-color: rgb(255, 255, 255);
+  z-index: 1300;
 }
 
 .cart_vanegation_container {
@@ -36,6 +37,7 @@
   width: 100vw;
   bottom: 60px;
   background-color: rgb(245, 252, 255);
+  z-index: 1200;
 }
 
 .section_iconcart_number {

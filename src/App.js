@@ -19,6 +19,9 @@ function App() {
   const [openModal, setOpenModal] = useState(false);
   const [newCount, setNewCount] = useState(0);
   const [newId, setNewId] = useState();
+  const [openCountIcon, setOpenCountIcon] = useState(false)
+
+  
 
 
 
