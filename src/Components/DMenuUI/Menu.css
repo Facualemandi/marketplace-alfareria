@@ -1,18 +1,22 @@
-.container_menu{
-    background-color: rgb(235, 235, 235);
-    box-shadow: 1px 1px 2px 1px rgb(226, 226, 226);
-    border-radius: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 38px;
-    position: absolute;
-    top: 3vh;
-    right: 3vh;
+.container_menu {
+  background-color: rgb(244, 244, 244);
+  box-shadow: 1px 1px 2px 1px rgb(226, 226, 226);
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 38px;
+  position: absolute;
+  top: 3vh;
+  right: 3vh;
+  z-index: 900;
+  width: 40px;
 }
-.icon_menu{
-    width: 10vw;
-    height: 30px;
- 
+.icon_menu {
+  width: 10vw;
+  height: 30px;
+  position: absolute;
+  z-index: 910;
+  
 }
 

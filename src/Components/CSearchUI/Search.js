@@ -1,9 +1,9 @@
 import React from "react";
 import { BsSearch } from "react-icons/bs";
-import Menu from "../DMenuUI/Menu";
 import "./Search.css";
 
 const Search = ({ search, handleSearch, handleBowls, handlePlatos,handleTazas, platos, tazas, bowls }) => {
+
 
 
   return (
@@ -19,9 +19,7 @@ const Search = ({ search, handleSearch, handleBowls, handlePlatos,handleTazas, p
           <BsSearch />
         </section>
 
-        <section>
-          <Menu />
-        </section>
+  
       </section>
 
       <ul className="categories">

@@ -1,0 +1,19 @@
+.scontainer_Menu_lateral{
+    width: 50vw;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    height: 100%;
+    background-color: white;
+}
+
+.ul_menu_lateral{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10vh;
+}
+.ul_menu_lateral li {
+    margin: 8px;
+    padding: 8px;
+}

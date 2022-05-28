@@ -1,7 +1,6 @@
 import React from "react";
 import "./NavegationContainer.css";
 import { GiShoppingCart } from "react-icons/gi";
-import { BsSuitHeart } from "react-icons/bs";
 import ProductInTheCart from "../ProductInTheCart/ProductInTheCart";
 
 const NavegationContainer = ({
