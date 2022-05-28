@@ -5,13 +5,6 @@
   top: 0px;
   height: 100%;
   background-color: white;
-  right: -240px;
-  transition: 0.5s;
-}
-
-.scontainer_Menu_lateral.is-active {
-  right: 0px;
-  transition: 0.5s;
 }
 
 .ul_menu_lateral {

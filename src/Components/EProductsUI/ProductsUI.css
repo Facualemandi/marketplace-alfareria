@@ -3,7 +3,7 @@
   margin-top: 2vh;
   cursor: pointer;
   transition: 1s;
-  background-color: #EFFFFD;
+  background-color: #eef7ff;
   box-shadow: 1px 1px 2px 1px rgb(235, 235, 235);
   border-radius: 5px;
   padding: 5px;
@@ -11,7 +11,7 @@
 
 .container_prodcts_ui.is-active{
     border-radius: 15px;
-    background-color: #c2f2ef;
+    background-color: #c2e4f2;
     box-shadow: 1px 1px 3px 1px rgb(228, 228, 228);
     padding: 5px;
     transition: 0.5s;
@@ -43,5 +43,16 @@
     font-family: "Open Sans", sans-serif;
     font-size: 16px;
     text-decoration: none;
+    color: black;
+    text-decoration: none; 
+    margin-top: 1vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    background-color: rgb(213, 231, 247);
+}
 
+.decoration{
+  text-decoration: none;
 }

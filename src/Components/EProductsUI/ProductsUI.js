@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import './ProductsUI.css'
+import { BsArrowRightShort } from 'react-icons/bs';
 
 const ProductsUI = ({ image, name, price,el, seeProduct}) => {
 
@@ -27,8 +28,8 @@ const ProductsUI = ({ image, name, price,el, seeProduct}) => {
                <span>${price}</span>
            </section>
 
-           <NavLink to={`/description/${name}`}>
-                  {lookProduct &&  <p className="more_product" onClick={() => seeProduct(el)}> Ver más</p>}
+           <NavLink to={`/description/${name}`} className='decoration'>
+                  {lookProduct &&  <p className="more_product" onClick={() => seeProduct(el)}> Ver más <BsArrowRightShort/>  </p>}
            </NavLink>
 
       </section>
