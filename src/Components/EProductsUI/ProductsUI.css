@@ -7,6 +7,7 @@
   box-shadow: 1px 1px 2px 1px rgb(235, 235, 235);
   border-radius: 5px;
   padding: 5px;
+  position: relative;
 }
 
 .img_producs_ui {
@@ -54,21 +55,29 @@
 
 .icon_more_products {
   width: max-content;
-  position: absolute;
-  right: -5vh;
+  position: relative;
   width: 8vw;
   height: 8vw;
   border-radius: 100%;
   border: 1px solid rgb(255, 255, 255);
   background-color: white;
   opacity: 0.7;
+
 }
+
+
+.section_icon_more_products{
+  position: absolute;
+  height: max-content;
+  right: 1vh;
+  top: 1vh;
+}
+
 
 .container_btns_images {
   border-radius: 10px;
   background-color: white;
-  position: absolute;
-  width: 70%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   top: 1vh;
@@ -76,33 +85,44 @@
 }
 
 .btn_add_image {
-  width: 30px;
-  background-color: rgb(234, 246, 255);
+  width: 40%;
   border: none;
   border-radius: 5px;
-  box-shadow: 1px 1px 2px 1px rgb(192, 192, 192);
+  background-color: rgb(201, 224, 242)
+
 }
 .btn_minus_image {
-  width: 30px;
-  background-color: rgb(234, 246, 255);
+  width: 40%;
   border: none;
   border-radius: 5px;
-  box-shadow: 1px 1px 2px 1px rgb(192, 192, 192);
+  background-color: rgb(201, 224, 242)
 }
 
 .btn_image{
   margin: auto;
+  width: 100%;
+
 }
 
-.btn_image button{
-  margin: 5px;
+.section_btns_imges{
+  background-color: rgb(201, 224, 242);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
+
 .add_cart_img{
-  width: 90px;
+  width: 100%;
   background-color: rgb(255, 225, 206);
   padding: 5px;
   border: none;
-  border-radius: 10px;
   font-family: sans-serif;
   font-size: 14px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
+

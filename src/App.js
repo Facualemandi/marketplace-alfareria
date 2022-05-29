@@ -21,7 +21,6 @@ function App() {
   const addProductCart = (data, id) => {
     if (count > 0) {
       setProductInTheCart([...productInTheCart, data]);
-      console.log('asd')
       setOpenModal(true);
       setNewId(id);
     }
@@ -71,6 +70,7 @@ function App() {
                 count={count}
                 addCount={addCount}
                 deleteCount={deleteCount}
+  
                 
               />
             }
