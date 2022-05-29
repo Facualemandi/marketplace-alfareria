@@ -4,4 +4,5 @@
 .section_product_continer_ui {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(100px);
 }

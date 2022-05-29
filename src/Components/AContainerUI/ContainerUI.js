@@ -19,8 +19,7 @@ const ContainerUI = ({
   addCount,
   deleteCount,
   openModal,
-  setOpenModal
-  
+  setOpenModal,
 }) => {
   const [items] = useTotalProducts();
   const { search, setSearch, newBazar } = useSearch();
@@ -62,14 +61,7 @@ const ContainerUI = ({
                 seeProduct={seeProduct}
                 el={el}
                 size={el.size}
-                count={count}
-                addProductCart={addProductCart}
-                data={descriptionProduct}
-                addCount={addCount}
-                deleteCount={deleteCount}    
-                openModal={openModal} 
-                setOpenModal={setOpenModal}
-                />
+              />
             ))}
           </section>
         )}
@@ -85,13 +77,6 @@ const ContainerUI = ({
                 seeProduct={seeProduct}
                 el={el}
                 size={el.size}
-                count={count}
-                addProductCart={addProductCart}
-                data={descriptionProduct}
-                addCount={addCount}
-                deleteCount={deleteCount}    
-                openModal={openModal} 
-                setOpenModal={setOpenModal}
               />
             ))}
           </section>
@@ -108,13 +93,6 @@ const ContainerUI = ({
                 seeProduct={seeProduct}
                 el={el}
                 size={el.size}
-                count={count}
-                addProductCart={addProductCart}
-                data={descriptionProduct}
-                addCount={addCount}
-                deleteCount={deleteCount}    
-                openModal={openModal} 
-                setOpenModal={setOpenModal}
               />
             ))}
           </section>
@@ -131,13 +109,6 @@ const ContainerUI = ({
                 seeProduct={seeProduct}
                 el={el}
                 size={el.size}
-                count={count}
-                addProductCart={addProductCart}
-                data={descriptionProduct}
-                addCount={addCount}
-                deleteCount={deleteCount}    
-                openModal={openModal} 
-                setOpenModal={setOpenModal}
               />
             ))}
           </section>
