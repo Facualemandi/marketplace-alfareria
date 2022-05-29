@@ -1,7 +1,6 @@
 .container_prodcts_ui {
   margin: 1vh;
   margin-top: 2vh;
-  cursor: pointer;
   transition: 1s;
   background-color: #eef7ff;
   box-shadow: 1px 1px 2px 1px rgb(235, 235, 235);
