@@ -35,7 +35,7 @@ const ProductsUI = ({
 
   return (
     <>
-      <section className={`container_prodcts_ui`}>
+      <section className='container_prodcts_ui'>
         <section className="section_products_ui">
           <section
             className="section_icon_more_products"
@@ -59,24 +59,13 @@ const ProductsUI = ({
             {openCount && (
               <section className="btn_image">
                 <section className="section_btns_imges">
-                  <button className="btn_minus_image" onClick={deleteCount}>
-                    {" "}
-                    -{" "}
-                  </button>
+                  <button className="btn_minus_image" onClick={deleteCount}>-</button>
                   <span>{count}</span>
-                  <button className="btn_add_image" onClick={addCount}>
-                    {" "}
-                    +{" "}
-                  </button>
+                  <button className="btn_add_image" onClick={addCount}>+</button>
                 </section>
 
                 <section>
-                  <button
-                    className="add_cart_img"
-                    onClick={() => addProductCart(data, id)}
-                  >
-                    Add to cart
-                  </button>
+                  <button className="add_cart_img"  onClick={() => addProductCart(data, id)} > Add to cart </button>
                 </section>
               </section>
             )}

@@ -84,6 +84,14 @@ const ContainerUI = ({
                 price={el.price}
                 seeProduct={seeProduct}
                 el={el}
+                size={el.size}
+                count={count}
+                addProductCart={addProductCart}
+                data={descriptionProduct}
+                addCount={addCount}
+                deleteCount={deleteCount}    
+                openModal={openModal} 
+                setOpenModal={setOpenModal}
               />
             ))}
           </section>
@@ -99,6 +107,10 @@ const ContainerUI = ({
                 price={el.price}
                 seeProduct={seeProduct}
                 el={el}
+                addCount={addCount}
+                deleteCount={deleteCount}    
+                openModal={openModal} 
+                setOpenModal={setOpenModal}
               />
             ))}
           </section>
