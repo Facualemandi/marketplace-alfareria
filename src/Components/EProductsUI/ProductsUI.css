@@ -87,14 +87,16 @@
   width: 40%;
   border: none;
   border-radius: 5px;
-  background-color: rgb(201, 224, 242)
+  background-color: rgb(201, 224, 242);
+  cursor: pointer;
 
 }
 .btn_minus_image {
   width: 40%;
   border: none;
   border-radius: 5px;
-  background-color: rgb(201, 224, 242)
+  background-color: rgb(201, 224, 242);
+  cursor: pointer;
 }
 
 .btn_image{
@@ -123,5 +125,6 @@
   font-size: 14px;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
+  cursor: pointer;
 }
 
