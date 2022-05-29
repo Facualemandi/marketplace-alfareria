@@ -23,6 +23,7 @@ function App() {
       setProductInTheCart([...productInTheCart, data]);
       setOpenModal(true);
       setNewId(id);
+      console.log(productInTheCart)
     }
   };
   useEffect(() => {
@@ -56,6 +57,8 @@ function App() {
         count={count}
         descriptionProduct={descriptionProduct}
         newCount={newCount}
+        setNewCount={setNewCount}
+        
       />
 
       {!loader && (
@@ -65,15 +68,7 @@ function App() {
             element={
               <ContainerUI
                 seeProduct={seeProduct}
-                addProductCart={addProductCart}
-                descriptionProduct={descriptionProduct}
-                count={count}
-                addCount={addCount}
-                deleteCount={deleteCount}
-                openModal={openModal}
-                setOpenModal={setOpenModal}
-  
-                
+              
               />
             }
           />

@@ -10,6 +10,7 @@ const NavegationContainer = ({
   count,
   setProductInTheCart,
   newCount,
+  setNewCount,
 }) => {
   // let objetProduct = Object.values(productInTheCart)
 
@@ -25,6 +26,7 @@ const NavegationContainer = ({
             productInTheCart={productInTheCart}
             setProductInTheCart={setProductInTheCart}
             newCount={newCount}
+            setNewCount={setNewCount}
           />
         </section>
       )}

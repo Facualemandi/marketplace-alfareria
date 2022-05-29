@@ -10,6 +10,8 @@ const ProductInTheCart = ({
   setProductInTheCart,
   newCount,
   newElementInCart,
+  setNewCount,
+  addCount,
 }) => {
 
   
@@ -37,6 +39,7 @@ const ProductInTheCart = ({
           <AcumulationOfProductCart
             key={el.id}
             id={el.id}
+            el={el}
             name={el.name}
             image={el.image}
             price={el.price}
@@ -45,7 +48,9 @@ const ProductInTheCart = ({
             productValue={productValue}
             deleteObj={deleteObj}
             productInTheCart={productInTheCart}
+            setProductInTheCart={setProductInTheCart}
             newCount={newCount}
+            setNewCount={setNewCount}
             newElementInCart={newElementInCart}
           />
         ))

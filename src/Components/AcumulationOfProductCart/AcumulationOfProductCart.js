@@ -1,5 +1,6 @@
 import "./AcumulationOfProductCart.css";
 import { RiDeleteBin6Line } from "react-icons/ri";
+import { useEffect, useState } from "react";
 
 const AcumulationOfProductCart = ({
   deleteObj,
@@ -9,11 +10,24 @@ const AcumulationOfProductCart = ({
   id,
   newCount,
   amount,
-}) => {
+  productInTheCart,
+  el,
+  setNewCount,
+  count,
+  }) => {
 
- 
+   const [newAmount, setNewAmount] = useState(amount)
+  
+  const totalValue = newAmount * price;
 
-  const totalValue = newCount * price;
+
+   const changeNewAmount = (el, id) => {
+     if(el.id === id){
+           el.amount = amount + 1
+           console.log(el.amount)
+           console.log(el)
+     }
+   }
 
   return (
     <>
@@ -26,15 +40,20 @@ const AcumulationOfProductCart = ({
           <p className="total_acumulation">Total: ${totalValue}.00</p>
         </section>
 
-        <p className="count_acumulation">x{amount}</p>
+        <section className="section_acumulation_cart">
+          <p className="count_acumulation">x{newAmount}</p>
+
+          <section className="acumulation_add_minus_cart">
+            <button>-</button>
+            <button onClick={() => changeNewAmount(el, id)}>+</button>
+          </section>
+        </section>
 
         <RiDeleteBin6Line
           onClick={() => deleteObj(id)}
           className="icon_delete_cart"
         />
       </section>
-
-     
     </>
   );
 };

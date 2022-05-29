@@ -39,3 +39,30 @@
     height: 30px;
     color: rgb(97, 97, 97);
 }
+
+.section_acumulation_cart{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+.acumulation_add_minus_cart{
+    width: 60px;
+    display: flex;
+    
+}
+.acumulation_add_minus_cart{
+    margin-top: 1vh;
+}
+
+.acumulation_add_minus_cart button{
+    width: 25px;
+    height: 25px;
+    margin-top: 1vh;
+    margin: auto;
+    border: none;
+    border: 1px solid rgb(196, 196, 196);
+    border-radius: 5px;
+    margin: 3px;
+}

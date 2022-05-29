@@ -13,13 +13,6 @@ import "./ContainerUI.css";
 const ContainerUI = ({
   seeProduct,
   categories,
-  count,
-  addProductCart,
-  descriptionProduct,
-  addCount,
-  deleteCount,
-  openModal,
-  setOpenModal,
 }) => {
   const [items] = useTotalProducts();
   const { search, setSearch, newBazar } = useSearch();
