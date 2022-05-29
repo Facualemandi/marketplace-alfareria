@@ -1,4 +1,4 @@
-import React  from "react";
+import React from "react";
 import { useCategories } from "../../Hooks/useCategories";
 import { useSearch } from "../../Hooks/useSearch";
 import { useTotalProducts } from "../../Hooks/useTotalProducts";
@@ -10,7 +10,18 @@ import Search from "../CSearchUI/Search";
 import ProductsUI from "../EProductsUI/ProductsUI";
 import "./ContainerUI.css";
 
-const ContainerUI = ({ seeProduct, categories, count, addProductCart, descriptionProduct, addCount, deleteCount}) => {
+const ContainerUI = ({
+  seeProduct,
+  categories,
+  count,
+  addProductCart,
+  descriptionProduct,
+  addCount,
+  deleteCount,
+  openModal,
+  setOpenModal
+  
+}) => {
   const [items] = useTotalProducts();
   const { search, setSearch, newBazar } = useSearch();
 
@@ -39,7 +50,7 @@ const ContainerUI = ({ seeProduct, categories, count, addProductCart, descriptio
         tazas={tazas}
         bowls={bowls}
       />
-      <main className='main'>
+      <main className="main">
         {!platos && !tazas && !bowls && (
           <section className="section_product_continer_ui">
             {newBazar.map((el) => (
@@ -55,9 +66,10 @@ const ContainerUI = ({ seeProduct, categories, count, addProductCart, descriptio
                 addProductCart={addProductCart}
                 data={descriptionProduct}
                 addCount={addCount}
-                deleteCount={deleteCount}
-
-              />
+                deleteCount={deleteCount}    
+                openModal={openModal} 
+                setOpenModal={setOpenModal}
+                />
             ))}
           </section>
         )}

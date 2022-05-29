@@ -70,6 +70,8 @@ function App() {
                 count={count}
                 addCount={addCount}
                 deleteCount={deleteCount}
+                openModal={openModal}
+                setOpenModal={setOpenModal}
   
                 
               />
