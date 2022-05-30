@@ -23,7 +23,6 @@ function App() {
       setProductInTheCart([...productInTheCart, data]);
       setOpenModal(true);
       setNewId(id);
-      console.log(productInTheCart)
     }
   };
   useEffect(() => {
@@ -44,6 +43,14 @@ function App() {
   const onReturn = () => {
     nav("/");
   };
+
+
+
+
+
+
+
+
 
   return (
     <>

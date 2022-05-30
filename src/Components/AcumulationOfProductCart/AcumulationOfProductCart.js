@@ -8,26 +8,19 @@ const AcumulationOfProductCart = ({
   image,
   price,
   id,
-  newCount,
   amount,
-  productInTheCart,
   el,
-  setNewCount,
-  count,
-  }) => {
+  productInTheCart,
+}) => {
+  const totalValue = amount * price;
 
-   const [newAmount, setNewAmount] = useState(amount)
+
   
-  const totalValue = newAmount * price;
 
-
-   const changeNewAmount = (el, id) => {
-     if(el.id === id){
-           el.amount = amount + 1
-           console.log(el.amount)
-           console.log(el)
-     }
-   }
+  const newAmount = (el, id) => {
+     el.amount = el.amount + 1
+  }
+ 
 
   return (
     <>
@@ -41,11 +34,12 @@ const AcumulationOfProductCart = ({
         </section>
 
         <section className="section_acumulation_cart">
-          <p className="count_acumulation">x{newAmount}</p>
+          <p className="count_acumulation">x{amount}</p>
 
           <section className="acumulation_add_minus_cart">
             <button>-</button>
-            <button onClick={() => changeNewAmount(el, id)}>+</button>
+
+            <button onClick={() => newAmount(el,id)}>+</button>
           </section>
         </section>
 

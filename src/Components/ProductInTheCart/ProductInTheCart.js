@@ -25,7 +25,7 @@ const ProductInTheCart = ({
     setProductInTheCart(newObj);
   };
 
-   console.log(productInTheCart)
+
 
 
   return (
@@ -52,6 +52,7 @@ const ProductInTheCart = ({
             newCount={newCount}
             setNewCount={setNewCount}
             newElementInCart={newElementInCart}
+
           />
         ))
       

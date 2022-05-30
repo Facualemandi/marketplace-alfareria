@@ -27,6 +27,7 @@ const NavegationContainer = ({
             setProductInTheCart={setProductInTheCart}
             newCount={newCount}
             setNewCount={setNewCount}
+    
           />
         </section>
       )}
