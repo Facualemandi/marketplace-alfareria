@@ -19,6 +19,7 @@ const DescriptionOneProduct = ({
   openModal,
   setOpenModal,
   onReturn,
+  makeOrder
 }) => {
   const { name, description, price, image, secondary, primary, material, size} = descriptionProduct;
 

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Route, Routes, useNavigate } from "react-router-dom";
 import ContainerUI from "./Components/AContainerUI/ContainerUI";
+import Data from "./Components/Data/Data";
 import DescriptionOneProduct from "./Components/FDescriptionOneProduct/DescriptionOneProduct";
 import NavegationContainer from "./Components/NavegationContainer/NavegationContainer";
 import { useAddDelete } from "./Hooks/useAddDelete";
@@ -51,6 +52,11 @@ function App() {
     nav("/");
   };
 
+
+  const makeOrder = () => {
+      alert('¿asd')
+  }
+
   return (
     <>
       {loader && <Loader />}
@@ -64,6 +70,7 @@ function App() {
         descriptionProduct={descriptionProduct}
         newCount={newCount}
         setNewCount={setNewCount}
+        makeOrder={makeOrder}
       />
 
       {!loader && (
@@ -81,9 +88,11 @@ function App() {
                 openModal={openModal}
                 setOpenModal={setOpenModal}
                 onReturn={onReturn}
+                makeOrder={makeOrder}
               />
             }
           />
+            <Route path="/orden" element={<Data/>}/>
         </Routes>
       )}
     </>

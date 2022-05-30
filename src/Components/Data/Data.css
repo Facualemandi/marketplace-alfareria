@@ -1,0 +1,94 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container_data {
+  height: 100vh;
+  width: 95vw;
+  margin: auto;
+}
+
+.form_container_principal {
+  width: 70vw;
+}
+
+.container_name_surname {
+  display: flex;
+  flex-direction: column;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  padding: 5px;
+}
+
+.container_name_surname input {
+  border-radius: 5px;
+  height: 35px;
+  border: none;
+  border: 1px solid rgb(205, 205, 205);
+}
+
+.type_entrega {
+  display: flex;
+  padding: 5px;
+}
+
+.type_entrega p {
+  border: 1px solid rgb(211, 211, 211);
+  font-family: sans-serif;
+  font-size: 14px;
+  border-radius: 5px;
+  width: 30vw;
+  margin: 5px;
+  padding: 5px;
+}
+
+.pago {
+  display: flex;
+}
+
+.pago p {
+  border: 1px solid rgb(224, 224, 224);
+  border-radius: 5px;
+  font-family: sans-serif;
+  font-size: 14px;
+  width: 30vw;
+  padding: 5px;
+  margin: 5px;
+}
+
+.section_pago {
+}
+
+.ref {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+
+.ref input {
+  border-radius: 5px;
+  height: 35px;
+  border: none;
+  border: 1px solid rgb(205, 205, 205);
+}
+
+.forma_de_pago {
+  padding-left: 5px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+}
+
+.forma_de_entrega {
+  margin-top: 5px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  padding-left: 5px;
+}
+
+.referencia{
+  margin-top: 15px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+}
