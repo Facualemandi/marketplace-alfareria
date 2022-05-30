@@ -4,11 +4,6 @@ import './WhatsApp.css'
 
 const WhatsApp = ({productInTheCart}) => {
 
-
-
-
- 
-
  
     
   return (
