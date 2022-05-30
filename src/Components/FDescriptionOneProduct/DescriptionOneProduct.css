@@ -1,5 +1,5 @@
 .img_description_one {
-  width: 85vw;
+  width: 90vw;
   height: 250px;
   margin: auto;
   display: flex;
@@ -9,7 +9,7 @@
 }
 
 .section_description_one {
-  width: 95vw;
+  width: 90vw;
   display: flex;
   flex-direction: column;
   margin: auto;
