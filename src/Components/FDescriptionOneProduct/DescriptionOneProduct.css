@@ -32,7 +32,7 @@
 
 
 .description_one {
-  font-size: 14px;
+  font-size: 12px;
   font-family: Arial;
   margin-top: 15px;
   display: flex;
@@ -40,6 +40,8 @@
 }
 .description_one b{
   margin-left: 3px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
 }
 
 .icon_description {
@@ -55,6 +57,6 @@
 .description_product_one{
   margin-top: 15px;
   font-size: 18px;
-  font-family: "Popins", sans-serif;
+  font-family: "Montserrat", sans-serif;
 
 }
