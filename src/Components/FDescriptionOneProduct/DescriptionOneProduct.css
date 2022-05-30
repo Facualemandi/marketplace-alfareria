@@ -19,17 +19,14 @@
 .section_description_one p:nth-child(1) {
   font-size: 18px;
   font-family: "Montserrat", sans-serif;
-  font-weight: bold;
 }
 
-.price_description_product{
+.price_description_product {
   font-family: "Montserrat", sans-serif;
   color: green;
   margin-top: 5px;
   font-size: 18px;
-  
 }
-
 
 .description_one {
   font-size: 12px;
@@ -38,7 +35,7 @@
   display: flex;
   align-items: center;
 }
-.description_one b{
+.description_one b {
   margin-left: 3px;
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
@@ -54,9 +51,15 @@
   margin-right: 10px;
 }
 
-.description_product_one{
+.description_product_one {
   margin-top: 15px;
-  font-size: 18px;
+  font-size: 16px;
   font-family: "Montserrat", sans-serif;
+  display: flex;
+}
 
+.description_product {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  margin-top: 10px;
 }

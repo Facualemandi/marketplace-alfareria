@@ -38,7 +38,10 @@ const DescriptionOneProduct = ({
           <p className="description_one"><MdInvertColors className="icon_description"/>Color Principal: <b>{primary}</b></p>
           <p className="description_one"><MdOutlineColorLens className="icon_description"/>Colores Secundarios: <b>{secondary}</b></p>
 
-          <p className="description_product_one"><MdOutlineDescription className="icon_description"/> {description}</p>
+          <section className="secttion_description_one_product">
+               <p className="description_product_one" > <MdOutlineDescription className="icon_description"/>Descripción: </p>
+               <p className="description_product"> {description}</p>
+          </section>
         </section>
 
         {openModal && 
