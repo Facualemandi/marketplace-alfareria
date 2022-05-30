@@ -17,7 +17,7 @@
 
 .section_direction input {
   border: 1px solid rgb(217, 217, 217);
-  height: 35px;
+  height: 50px;
   border-radius: 5px;
 }
 
@@ -44,7 +44,7 @@
   font-size: 14px;
 }
 .dpto_description input{
-    height: 35px;
+    height: 50px;
     border-radius: 5px;
     border: none;
     border: 1px solid rgb(208, 208, 208);
