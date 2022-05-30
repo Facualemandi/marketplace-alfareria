@@ -54,7 +54,7 @@ function App() {
 
 
   const makeOrder = () => {
-      alert('¿asd')
+    
   }
 
   return (
