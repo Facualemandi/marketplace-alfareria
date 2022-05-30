@@ -19,12 +19,19 @@ function App() {
   const [newId, setNewId] = useState();
 
   const addProductCart = (data, id) => {
-    if (count > 0) {
+    if (productInTheCart.includes(data)) {
+      const asd = productInTheCart.find(obj => obj.id === id)
+          asd.amount = count;
+          setCount(0)
+    } else {
       setProductInTheCart([...productInTheCart, data]);
       setOpenModal(true);
       setNewId(id);
     }
   };
+
+
+
   useEffect(() => {
     productInTheCart.find((obj) => {
       if (obj.id === newId) {
@@ -44,15 +51,6 @@ function App() {
     nav("/");
   };
 
-
-
-
-
-
-
-
-
-
   return (
     <>
       {loader && <Loader />}
@@ -66,20 +64,11 @@ function App() {
         descriptionProduct={descriptionProduct}
         newCount={newCount}
         setNewCount={setNewCount}
-        
       />
 
       {!loader && (
         <Routes>
-          <Route
-            path="/"
-            element={
-              <ContainerUI
-                seeProduct={seeProduct}
-              
-              />
-            }
-          />
+          <Route path="/" element={<ContainerUI seeProduct={seeProduct} />} />
           <Route
             path="/description/:name"
             element={
