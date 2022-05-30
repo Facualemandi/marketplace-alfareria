@@ -1,5 +1,5 @@
 .section_whatsapp {
-  width: 80vw;
+  width: 90vw;
   margin: 1vh auto;
   color: black;
   display: flex;
@@ -26,4 +26,17 @@
   height: 25px;
   margin-left: 10px;
   color: rgb(2, 169, 2);
+}
+
+.total_total{
+  display: flex;
+  width: 30vw;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  border-radius: 10px;
+  background-color: rgb(255, 249, 232);
+  padding: 10px;
+}
+.total_total b {
+  margin-left: 5px;
 }

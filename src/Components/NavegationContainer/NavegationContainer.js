@@ -16,6 +16,8 @@ const NavegationContainer = ({
 
   const valueProduct = Object.values(productInTheCart);
 
+    
+
   return (
     <>
       {cartPanel && (

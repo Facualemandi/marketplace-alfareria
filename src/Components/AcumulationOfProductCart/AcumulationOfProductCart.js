@@ -20,14 +20,12 @@ const AcumulationOfProductCart = ({
   const newAmount = (el) => {
     if(amount > 0){
       el.amount = el.amount + 1
-      console.log(el.amount)
       setIsNewAmount(el.amount)
      }
   };
   const deleteAmount = (el) => {
     if(amount > 0){
       el.amount = el.amount - 1
-      console.log(el.amount)
       setIsNewAmount(el.amount)
      }
   };
