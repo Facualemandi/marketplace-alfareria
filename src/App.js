@@ -92,7 +92,7 @@ function App() {
               />
             }
           />
-            <Route path="/orden" element={<Data/>}/>
+            <Route path="/orden" element={<Data productInTheCart={productInTheCart}/>}/>
         </Routes>
       )}
     </>

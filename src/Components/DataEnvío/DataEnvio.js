@@ -1,8 +1,15 @@
 import React, { useState } from "react";
 import "./DataEnvio.css";
 
+
+const initialValue = {
+  name:'',
+  apellido:'',
+}
+
 const DataEnvio = () => {
   const [dpto, setDpto] = useState(false);
+  const [data, setData] = useState(initialValue)
 
   const isDpto = () => {
     if (!dpto) {
@@ -12,6 +19,12 @@ const DataEnvio = () => {
     }
   };
 
+  const changeValue = (e) => {
+      console.log(e.target.value)
+  }
+
+
+
   return (
     <>
       <form className="container_form_second">
@@ -19,7 +32,7 @@ const DataEnvio = () => {
         <section className="">
           <section className="section_direction">
             <label for="calle">Calle</label>
-            <input type={"text"} id="calle" placeholder="dirección" />
+            <input type={"text"} id="calle" placeholder="dirección"  />
           </section>
 
           <section className="section_direction">
