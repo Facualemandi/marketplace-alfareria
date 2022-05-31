@@ -91,18 +91,17 @@
   padding-left: 5px;
 }
 
-.referencia{
+.referencia {
   margin-top: 15px;
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
 }
 
-
-.section_link_wsp{
+.section_link_wsp {
   width: 100vw;
   display: flex;
 }
-.link_whatapp{
+.link_whatapp {
   display: flex;
   align-items: center;
   margin: auto;
@@ -116,8 +115,21 @@
   text-decoration: none;
 }
 
-
-.icon_wsp{
+.icon_wsp {
   margin-left: 5px;
   color: green;
+}
+
+.error_name {
+  color: red;
+  font-size: 12px;
+}
+.container_name_surname .input_error_name {
+  border: 1px solid red;
+}
+
+.delivery {
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  color: red;
 }
