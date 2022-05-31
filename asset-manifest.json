@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/marketplace-alfareria/static/css/main.c0c1d955.css",
-    "main.js": "/marketplace-alfareria/static/js/main.c87fce37.js",
+    "main.js": "/marketplace-alfareria/static/js/main.12fd966f.js",
     "static/media/ceramica12.jpeg": "/marketplace-alfareria/static/media/ceramica12.898ea2b2f9bbbbc518f5.jpeg",
     "static/media/ceramica7.jpeg": "/marketplace-alfareria/static/media/ceramica7.00dfbc9e8965d4e4bf2d.jpeg",
     "static/media/ceramica9.jpeg": "/marketplace-alfareria/static/media/ceramica9.3ff310d348be8975ae99.jpeg",
@@ -22,10 +22,10 @@
     "static/media/CeramicaArtesanalLogo.png": "/marketplace-alfareria/static/media/CeramicaArtesanalLogo.0e0e9bee2b3bbf1a17d8.png",
     "index.html": "/marketplace-alfareria/index.html",
     "main.c0c1d955.css.map": "/marketplace-alfareria/static/css/main.c0c1d955.css.map",
-    "main.c87fce37.js.map": "/marketplace-alfareria/static/js/main.c87fce37.js.map"
+    "main.12fd966f.js.map": "/marketplace-alfareria/static/js/main.12fd966f.js.map"
   },
   "entrypoints": [
     "static/css/main.c0c1d955.css",
-    "static/js/main.c87fce37.js"
+    "static/js/main.12fd966f.js"
   ]
 }
