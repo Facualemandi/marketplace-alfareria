@@ -96,3 +96,28 @@
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
 }
+
+
+.section_link_wsp{
+  width: 100vw;
+  display: flex;
+}
+.link_whatapp{
+  display: flex;
+  align-items: center;
+  margin: auto;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: rgb(211, 241, 255);
+  color: black;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  margin-top: 5vh;
+  text-decoration: none;
+}
+
+
+.icon_wsp{
+  margin-left: 5px;
+  color: green;
+}

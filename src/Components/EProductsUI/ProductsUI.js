@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./ProductsUI.css";
-import { BsArrowRightShort } from "react-icons/bs";
+import { BsWhatsapp } from 'react-icons/bs';
 
 const ProductsUI = ({ image, name, price, el, seeProduct, size }) => {
   return (

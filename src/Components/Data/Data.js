@@ -1,6 +1,7 @@
 import "./Data.css";
 import React, { useState } from "react";
 import DataEnvio from "../DataEnvío/DataEnvio";
+import { RiWhatsappFill } from 'react-icons/ri';
 
 const initialValue = {
   name: "",
@@ -36,25 +37,14 @@ const Data = ({ productInTheCart }) => {
     });
   };
 
+  const products = productInTheCart.map((el) => {
+    const isProduct = el.name;
+    const isAmount = el.amount;
 
-  
-const products = productInTheCart.map( el => {
-       const isProduct = el.name 
-       const isAmount = el.amount
+    return [isProduct, isAmount];
+  });
 
-  return [
-    isProduct,
-    isAmount
-  ]
-})
-
-console.log(products)
-
-
-
-
-
-
+  console.log(products);
   return (
     <>
       <section className="container_data">
@@ -108,13 +98,15 @@ console.log(products)
           </section>
         </section>
 
-        {retiro && (
+        <section className="section_link_wsp">
           <a
+            className="link_whatapp"
             href={`https://api.whatsapp.com/send?phone=543517653448&text=Hola!%20Me%20llamo%20${form.name}%20${form.apellido}%20Y%20quiero%20pedirte%20${products[0]}%20${products[1]}`}
           >
-            WhatsApp
+            Hacer pedido por WhatsApp
+            <RiWhatsappFill className="icon_wsp"/>
           </a>
-        )}
+        </section>
       </section>
     </>
   );
