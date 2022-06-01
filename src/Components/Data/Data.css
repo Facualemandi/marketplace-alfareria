@@ -133,3 +133,12 @@
   font-size: 12px;
   color: red;
 }
+
+.envio_true{
+  background-color: rgb(206, 233, 255);
+}
+
+.forma_pago_true{
+  background-color: rgb(206, 233, 255);
+
+}

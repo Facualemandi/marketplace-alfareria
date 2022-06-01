@@ -10,6 +10,10 @@ const initialValue = {
 };
 
 const Data = ({ productInTheCart }) => {
+   
+ let personalmente = 'Lo retiro personalmente'
+ let isEnvio = 'Necesito que me lo envien'
+
   const [retiro, setRetiro] = useState(false);
   const [envio, setEnvio] = useState(false);
   const [form, setForm] = useState(initialValue);
@@ -36,6 +40,18 @@ const Data = ({ productInTheCart }) => {
     }
   };
 
+  const isPayment = () => {
+    if(!payment){
+      setPayment(true)
+    }else{
+      setPayment(false)
+    }
+    }
+
+
+
+
+
   const changeValue = (e) => {
     setForm({
       ...form,
@@ -44,14 +60,15 @@ const Data = ({ productInTheCart }) => {
   };
 
   const valueErrors = (e) => {
-    e.preventDefault();
     if (!form.name) {
       setErrorName(true);
+      e.preventDefault();
     }else{
       setErrorName(false)
     }
     if(!form.apellido){
       setErrorSurname(true)
+      e.preventDefault();
     }else{
       setErrorSurname(false)
     }
@@ -59,10 +76,11 @@ const Data = ({ productInTheCart }) => {
 
   const products = productInTheCart.map((el) => {
     const isProduct = el.name;
-    const isAmount = el.amount;
+    const isAmount = `x(${el.amount})`;
 
-    return [isProduct, isAmount];
+    return [isAmount, isProduct];
   });
+
 
   console.log(products);
   return (
@@ -107,7 +125,7 @@ const Data = ({ productInTheCart }) => {
         <p className="forma_de_entrega">Forma de entrega:</p>
         <section className="">
           <section className="type_entrega">
-            <p onClick={retiroProduct}>Lo retiro personalmente</p>
+            <p onClick={retiroProduct} className={`${retiro && 'envio_true'}`}>Lo retiro personalmente</p>
             <p onClick={envioProduct}>Necesito que me lo envíen</p>
           </section>
           {delivery && (
@@ -119,37 +137,38 @@ const Data = ({ productInTheCart }) => {
           {envio && <DataEnvio />}
         </section>
 
-        <form className="ref">
+        {/* <form className="ref">
           <label for="referencias" className="referencia">
             Referencias:
           </label>
           <input type={"text"} id="referencias" placeholder="dirección" />
-        </form>
+        </form> */}
 
         <section className="section_pago">
-          <p className="forma_de_pago">Forma de pago</p>
+          <p className={`forma_de_pago`} onClick={isPayment}>Forma de pago</p>
 
           <section className="pago">
-            <p>Efectivo</p>
+            <p onClick={isPayment} className={`${payment && 'forma_pago_true'}`}>Efectivo</p>
             <p>Transferencia</p>
           </section>
-          {delivery && (
+          {!payment && (
             <p className="delivery">
-              La forma de entrega es obligatoria <AiFillWarning />
+              La forma de pago es obligatoria <AiFillWarning />
             </p>
           )}
         </section>
 
+      {form.name.length > 0 && form.apellido.length > 0 && retiro && payment &&
         <section className="section_link_wsp">
-          <a
-            onClick={valueErrors}
-            className="link_whatapp"
-            href={`https://api.whatsapp.com/send?phone=543517653448&text=Hola!%20Me%20llamo%20${form.name}%20${form.apellido}%20Y%20quiero%20pedirte%20${products[0]}%20${products[1]}`}
-          >
-            Hacer pedido por WhatsApp
-            <RiWhatsappFill className="icon_wsp" />
-          </a>
-        </section>
+        <a
+          onClick={valueErrors}
+          className="link_whatapp"
+          href={`https://api.whatsapp.com/send?phone=543517653448&text=Hola!%20Me%20llamo%20${form.name}%20${form.apellido}%20Y%20quiero%20pedirte%20${products}%20${retiro && personalmente}`}
+        >
+          Hacer pedido por WhatsApp
+          <RiWhatsappFill className="icon_wsp" />
+        </a>
+      </section>}
       </section>
     </>
   );
