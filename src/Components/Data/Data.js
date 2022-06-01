@@ -86,7 +86,7 @@ const Data = ({ productInTheCart }) => {
   return (
     <>
     <p className="finish"> Último Paso! </p>
-    <span className="obligated">Todo lo que es marcado con (*) es obligatorio</span>
+    <span className="obligated">Todo lo que esta marcado con (*) es obligatorio</span>
       <section className="container_data">
         <form className="form_container_principal">
           <div className="container_name_surname">
