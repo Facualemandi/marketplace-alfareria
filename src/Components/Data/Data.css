@@ -62,8 +62,7 @@
   margin: 5px;
 }
 
-.section_pago {
-}
+
 
 .ref {
   display: flex;
@@ -124,10 +123,6 @@
   color: red;
   font-size: 12px;
 }
-.container_name_surname .input_error_name {
-  border: 1px solid red;
-}
-
 .delivery {
   font-family: "Montserrat", sans-serif;
   font-size: 12px;
@@ -141,4 +136,24 @@
 .forma_pago_true{
   background-color: rgb(206, 233, 255);
 
+}
+
+.finish{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+  padding: 5px;
+  font-family: "Montserrat", sans-serif;
+  background-color: rgb(211, 251, 211);
+}
+.obligated{
+  font-size: 10px;
+  font-family: "Montserrat", sans-serif;
+  color: rgb(237, 185, 15);
+  margin-left: 10px;
+}
+
+.section_pago{
+  margin-top: 15px;
 }

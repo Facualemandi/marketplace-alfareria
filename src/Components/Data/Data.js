@@ -85,27 +85,24 @@ const Data = ({ productInTheCart }) => {
   console.log(products);
   return (
     <>
+    <p className="finish"> Último Paso! </p>
+    <span className="obligated">Todo lo que es marcado con (*) es obligatorio</span>
       <section className="container_data">
         <form className="form_container_principal">
           <div className="container_name_surname">
-            <label for="name">Nombre:</label>
+            <label for="name">Nombre: *</label>
             <input
-              className={`${errorName && "input_error_name"}`}
+              className='input_name'
               type={"text"}
               name="name"
               placeholder="Enter your name"
               onChange={changeValue}
               value={form.name}
             />
-            {errorName && (
-              <p className="error_name">
-                Por favor, ingresa un nombre <AiFillWarning />
-              </p>
-            )}
           </div>
 
           <div className="container_name_surname">
-            <label for="apellido">Apellido:</label>
+            <label for="apellido">Apellido: *</label>
             <input
               type={"text"}
               name="apellido"
@@ -114,48 +111,25 @@ const Data = ({ productInTheCart }) => {
               value={form.apellido}
               className={`${errorSurname && "input_error_name"}`}
             />
-            {errorSurname && (
-              <p className="error_name">
-                Por favor, ingresa un apellido <AiFillWarning />
-              </p>
-            )}
           </div>
         </form>
 
-        <p className="forma_de_entrega">Forma de entrega:</p>
+        <p className="forma_de_entrega">Forma de entrega: *</p>
         <section className="">
           <section className="type_entrega">
             <p onClick={retiroProduct} className={`${retiro && 'envio_true'}`}>Lo retiro personalmente</p>
             <p onClick={envioProduct}>Necesito que me lo envíen</p>
           </section>
-          {delivery && (
-            <p className="delivery">
-              La forma de entrega es obligatoria <AiFillWarning />
-            </p>
-          )}
-
           {envio && <DataEnvio />}
         </section>
 
-        {/* <form className="ref">
-          <label for="referencias" className="referencia">
-            Referencias:
-          </label>
-          <input type={"text"} id="referencias" placeholder="dirección" />
-        </form> */}
-
         <section className="section_pago">
-          <p className={`forma_de_pago`} onClick={isPayment}>Forma de pago</p>
+          <p className={`forma_de_pago`} onClick={isPayment}>Forma de pago: *</p>
 
           <section className="pago">
             <p onClick={isPayment} className={`${payment && 'forma_pago_true'}`}>Efectivo</p>
             <p>Transferencia</p>
           </section>
-          {!payment && (
-            <p className="delivery">
-              La forma de pago es obligatoria <AiFillWarning />
-            </p>
-          )}
         </section>
 
       {form.name.length > 0 && form.apellido.length > 0 && retiro && payment &&
