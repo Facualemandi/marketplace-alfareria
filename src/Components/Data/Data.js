@@ -38,8 +38,6 @@ const Data = ({ productInTheCart }) => {
     mobile.map((el) => {
       if (agent.toLowerCase().indexOf(el.toLowerCase()) > 0) {
         return true;
-      } else {
-        return false;
       }
     });
   }
@@ -52,6 +50,7 @@ const Data = ({ productInTheCart }) => {
     e.preventDefault();
 
     let mensaje = `send?phone=${telefono}&text=*_Formulario Easy App CODE_*%0A*¿Cual es tu nombre?*%0A${form.nombre}%0A*¿Cuáles son tus apellidos?*%0A${form.apellido}`;
+    
     if (isMobile()) {
       window.open(urlMobile + mensaje, "_blank");
     } else {
@@ -94,7 +93,7 @@ const Data = ({ productInTheCart }) => {
         <button id="submit" type="submit" class="boton">
           <i class="fab fa-whatsapp"></i> Enviar WhatsApp
         </button>
-        F
+        C
       </form>
     </>
   );
