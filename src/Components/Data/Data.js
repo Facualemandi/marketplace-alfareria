@@ -45,7 +45,7 @@ const Data = ({ productInTheCart }) => {
   }
 
   const urlDesktop = "https://web.whatsapp.com/";
-  const urlMobile = "whatsapp://";
+  const urlMobile = "https://api.whatsapp.com/";
   const telefono = "543517653448";
 
   const onSubmit = (e) => {
@@ -94,6 +94,7 @@ const Data = ({ productInTheCart }) => {
         <button id="submit" type="submit" class="boton">
           <i class="fab fa-whatsapp"></i> Enviar WhatsApp
         </button>
+        F
       </form>
     </>
   );
