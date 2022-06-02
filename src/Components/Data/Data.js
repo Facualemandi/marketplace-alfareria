@@ -101,7 +101,7 @@ const Data = ({ productInTheCart }) => {
         <p> Forma de entrega:</p>
 
         <section className="section_entrega">
-          <p onClick={isRetiroPersonal} className="personalmente">
+          <p onClick={isRetiroPersonal} className={`personalmente ${retiroPersonal && 'is-active'}`}>
             Lo retiro personalmente
           </p>
         </section>

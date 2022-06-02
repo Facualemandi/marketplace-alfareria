@@ -159,11 +159,16 @@
   padding: 10px;
 }
 .personalmente{
-  border: 1px solid rgb(61, 17, 142);
   font-family: "Montserrat", sans-serif;
+  border: 1px solid rgb(221, 221, 221);
   font-size: 14px;
   width: 40vw;
   text-align: center;
   padding: 5px;
   border-radius: 5px;
+}
+
+.personalmente.is-active{
+  background-color: rgb(210, 232, 255);
+  box-shadow: 1px 1px 2px 1px rgb(221, 221, 221);
 }
