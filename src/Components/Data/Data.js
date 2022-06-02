@@ -41,14 +41,14 @@ const Data = ({ productInTheCart }) => {
 
   const onSubmit = (e) => {
     e.preventDefault()
-    setTimeout(() => {
+  
         let mensaje = `send?phone= + ${telefono} + &text=*_Formulario Easy App CODE_*%0A*¿Cual es tu nombre?*%0A + ${form.nombre} %0A*¿Cuáles son tus apellidos?*%0A + ${form.apellido}`
          if(isMobile()){
               window.open(urlMobile + mensaje, '_blank')
          }else{
           window.open(urlDesktop + mensaje, '_blank')
          }
-      }, 3000)
+
   }
 
   const onChangeValue = (e) => {
