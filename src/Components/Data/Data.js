@@ -22,23 +22,15 @@ const Data = ({ productInTheCart }) => {
   });
 
   function isMobile() {
-    let agent = navigator.userAgent;
-    
-    let mobile = [ "iphone", "ipad", "android", "blackberry", "nokia", "opera mini",  "windows mobile", "windows phone", "iemobile"];
-    mobile.map((el) => {
-      if (sessionStorage.desktop) {
+    if (sessionStorage.desktop)
         return false;
-      } else if (localStorage.mobile) {
+    else if (localStorage.mobile)
         return true;
-      }
-      
-      if (agent.toLowerCase().indexOf(el.toLowerCase()) > 0) {
-        return true;
-      } else {
-        return false;
-      }
-    });
-  }
+    var mobile = ['iphone', 'ipad', 'android', 'blackberry', 'nokia', 'opera mini', 'windows mobile', 'windows phone', 'iemobile'];
+    for (var i in mobile)
+        if (navigator.userAgent.toLowerCase().indexOf(mobile[i].toLowerCase()) > 0) return true;
+    return false;
+}
 
   const urlDesktop = "https://web.whatsapp.com/";
   const urlMobile = "whatsapp://";
