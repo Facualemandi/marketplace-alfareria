@@ -13,6 +13,7 @@ const initialValue = {
 
 const Data = ({ productInTheCart }) => {
   const [form, setForm] = useState(initialValue);
+  const [retiroPersonal, setRetiroPersonal] = useState(false);
 
   const products = productInTheCart.map((el) => {
     const isProduct = el.name;
@@ -22,15 +23,26 @@ const Data = ({ productInTheCart }) => {
   });
 
   function isMobile() {
-    if (sessionStorage.desktop)
-        return false;
-    else if (localStorage.mobile)
-        return true;
-    var mobile = ['iphone', 'ipad', 'android', 'blackberry', 'nokia', 'opera mini', 'windows mobile', 'windows phone', 'iemobile'];
+    if (sessionStorage.desktop) return false;
+    else if (localStorage.mobile) return true;
+    var mobile = [
+      "iphone",
+      "ipad",
+      "android",
+      "blackberry",
+      "nokia",
+      "opera mini",
+      "windows mobile",
+      "windows phone",
+      "iemobile",
+    ];
     for (var i in mobile)
-        if (navigator.userAgent.toLowerCase().indexOf(mobile[i].toLowerCase()) > 0) return true;
+      if (
+        navigator.userAgent.toLowerCase().indexOf(mobile[i].toLowerCase()) > 0
+      )
+        return true;
     return false;
-}
+  }
 
   const urlDesktop = "https://web.whatsapp.com/";
   const urlMobile = "whatsapp://";
@@ -39,7 +51,11 @@ const Data = ({ productInTheCart }) => {
   const onSubmit = (e) => {
     e.preventDefault();
 
-    let mensaje = `send?phone=${telefono}&text=*_Formulario Easy App CODE_*%0A*¿Cual es tu nombre?*%0A${form.nombre}%0A*¿Cuáles son tus apellidos?*%0A${form.apellido}`;
+    let mensaje = `send?phone=${telefono}&text=*_Hola!, mi pedido es el siguiente:_*%0A*¿Cual es tu nombre?*%0A${
+      form.nombre
+    }${form.apellido}%0A*¿Forma de entrega?*%0A${
+      retiroPersonal && "Lo retiro personalmente"
+    }`;
     if (isMobile()) {
       window.open(urlMobile + mensaje, "_blank");
     } else {
@@ -54,7 +70,13 @@ const Data = ({ productInTheCart }) => {
     });
   };
 
-  console.log(products);
+  const isRetiroPersonal = () => {
+    if (!retiroPersonal) {
+      setRetiroPersonal(true);
+    } else {
+      setRetiroPersonal(false);
+    }
+  };
   return (
     <>
       <form id="formulario" class="formulario" onSubmit={onSubmit}>
@@ -79,10 +101,18 @@ const Data = ({ productInTheCart }) => {
           />
           <label>Apellido</label>
         </div>
+
+        <p> Forma de entrega:</p>
+
+        <section className="section_entrega">
+          <p onClick={isRetiroPersonal} className="personalmente">
+            Lo retiro personalmente
+          </p>
+        </section>
+        
         <button id="submit" type="submit" class="boton">
           <i class="fab fa-whatsapp"></i> Enviar WhatsApp
         </button>
-        FA
       </form>
     </>
   );
