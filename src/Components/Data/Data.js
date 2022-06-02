@@ -51,11 +51,7 @@ const Data = ({ productInTheCart }) => {
   const onSubmit = (e) => {
     e.preventDefault();
 
-    let mensaje = `send?phone=${telefono}&text=*_Hola!, mi pedido es el siguiente:_*%0A*¿Cual es tu nombre?*%0A${
-      form.nombre
-    }${form.apellido}%0A*¿Forma de entrega?*%0A${
-      retiroPersonal && "Lo retiro personalmente"
-    }`;
+    let mensaje = `send?phone=${telefono}&text=*_Hola!, mi pedido es el siguiente:_*%0A*¿Cual es tu nombre?*%0A${form.nombre}%20${form.apellido}%0A*¿Cual es tu pedido?*%0A${products}*%0A¿Como es tu forma de entrega?${retiroPersonal && 'Lo retiro personalmente'}`;
     if (isMobile()) {
       window.open(urlMobile + mensaje, "_blank");
     } else {
@@ -109,7 +105,7 @@ const Data = ({ productInTheCart }) => {
             Lo retiro personalmente
           </p>
         </section>
-        
+
         <button id="submit" type="submit" class="boton">
           <i class="fab fa-whatsapp"></i> Enviar WhatsApp
         </button>
