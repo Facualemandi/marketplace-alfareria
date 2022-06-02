@@ -23,7 +23,8 @@ const Data = ({ productInTheCart }) => {
 
   function isMobile() {
     let agent = navigator.userAgent;
-
+    
+    let mobile = [ "iphone", "ipad", "android", "blackberry", "nokia", "opera mini",  "windows mobile", "windows phone", "iemobile"];
     mobile.map((el) => {
       if (sessionStorage.desktop) {
         return false;
@@ -38,17 +39,6 @@ const Data = ({ productInTheCart }) => {
       }
     });
   }
-  let mobile = [
-    "iphone",
-    "ipad",
-    "android",
-    "blackberry",
-    "nokia",
-    "opera mini",
-    "windows mobile",
-    "windows phone",
-    "iemobile",
-  ];
 
   const urlDesktop = "https://web.whatsapp.com/";
   const urlMobile = "whatsapp://";
