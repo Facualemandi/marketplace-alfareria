@@ -24,7 +24,9 @@ const AcumulationOfProductCart = ({
      }
   };
   const deleteAmount = (el) => {
-    if(amount > 0){
+    if(el.amount === 1){
+           setIsNewAmount(1)
+     }else{
       el.amount = el.amount - 1
       setIsNewAmount(el.amount)
      }

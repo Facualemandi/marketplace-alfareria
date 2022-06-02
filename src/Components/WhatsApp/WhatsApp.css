@@ -20,13 +20,6 @@
   color: rgb(1, 138, 37);
 }
 
-/* .icon_whatsapp {
-  width: 25px;
-  height: 25px;
-  margin-left: 10px;
-  color: rgb(2, 169, 2);
-} */
-
 .total_total{
   display: flex;
   width: 30vw;
@@ -38,6 +31,7 @@
 }
 .total_total b {
   margin-left: 5px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .section_total_total_whatapp{

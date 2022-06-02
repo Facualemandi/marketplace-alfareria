@@ -7,21 +7,8 @@ const initialValue = {
   apellido:'',
 }
 
-const DataEnvio = () => {
-  const [dpto, setDpto] = useState(false);
+const DataEnvio = ({form, changeValue}) => {
   const [data, setData] = useState(initialValue)
-
-  const isDpto = () => {
-    if (!dpto) {
-      setDpto(true);
-    } else {
-      setDpto(false);
-    }
-  };
-
-  const changeValue = (e) => {
-      console.log(e.target.value)
-  }
 
 
 
@@ -44,11 +31,11 @@ const DataEnvio = () => {
         <section className="section_dpto">
           <p className="dpto_question">Es un departamento?</p>
           <section className="response">
-            <span onClick={isDpto}>Si</span>
+            <span onClick={''}>Si</span>
             <span>No</span>
           </section>
 
-          {dpto && (
+          {'' && (
             <section className="dpto_description">
               <label for="dpto">Piso/Dpto</label>
               <input type={"text"} id="dpto" placeholder="dirección" />

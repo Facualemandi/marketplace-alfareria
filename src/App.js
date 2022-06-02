@@ -53,9 +53,6 @@ function App() {
   };
 
 
-  const makeOrder = () => {
-    
-  }
 
   return (
     <>
@@ -70,7 +67,6 @@ function App() {
         descriptionProduct={descriptionProduct}
         newCount={newCount}
         setNewCount={setNewCount}
-        makeOrder={makeOrder}
       />
 
       {!loader && (
@@ -88,7 +84,6 @@ function App() {
                 openModal={openModal}
                 setOpenModal={setOpenModal}
                 onReturn={onReturn}
-                makeOrder={makeOrder}
               />
             }
           />

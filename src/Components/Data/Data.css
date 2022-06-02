@@ -62,8 +62,6 @@
   margin: 5px;
 }
 
-
-
 .ref {
   display: flex;
   flex-direction: column;
@@ -90,14 +88,8 @@
   padding-left: 5px;
 }
 
-.referencia {
-  margin-top: 15px;
-  font-family: "Montserrat", sans-serif;
-  font-size: 14px;
-}
-
 .section_link_wsp {
-  width: 100vw;
+  width: 90vw;
   display: flex;
 }
 .link_whatapp {
@@ -105,7 +97,6 @@
   justify-content: center;
   align-items: center;
   width: 80vw;
-  margin: auto;
   padding: 10px;
   border-radius: 5px;
   background-color: rgb(211, 241, 255);
@@ -131,31 +122,33 @@
   color: red;
 }
 
-.envio_true{
+.envio_true {
   background-color: rgb(206, 233, 255);
+  box-shadow: 1px 1px 2px 1px rgb(191, 191, 191);
 }
 
-.forma_pago_true{
-  background-color: rgb(206, 233, 255);
 
+.forma_pago_true {
+  background-color: rgb(206, 233, 255);
+  box-shadow: 1px 1px 2px 1px rgb(191, 191, 191);
 }
 
-.finish{
+.finish {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 15px;
   padding: 5px;
   font-family: "Montserrat", sans-serif;
-  background-color: rgb(211, 251, 211);
+  background-color: rgb(228, 247, 255);
 }
-.obligated{
+.obligated {
   font-size: 10px;
   font-family: "Montserrat", sans-serif;
-  color: rgb(237, 185, 15);
+  color: rgb(255, 196, 0);
   margin-left: 10px;
 }
 
-.section_pago{
+.section_pago {
   margin-top: 15px;
 }

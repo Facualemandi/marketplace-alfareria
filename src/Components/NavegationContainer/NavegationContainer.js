@@ -11,13 +11,11 @@ const NavegationContainer = ({
   setProductInTheCart,
   newCount,
   setNewCount,
-  makeOrder
+
 }) => {
   // let objetProduct = Object.values(productInTheCart)
 
   const valueProduct = Object.values(productInTheCart);
-
-    
 
   return (
     <>
@@ -30,8 +28,6 @@ const NavegationContainer = ({
             setProductInTheCart={setProductInTheCart}
             newCount={newCount}
             setNewCount={setNewCount}
-            makeOrder={makeOrder}
-    
           />
         </section>
       )}
