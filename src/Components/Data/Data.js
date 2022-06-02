@@ -21,6 +21,23 @@ const Data = ({ productInTheCart }) => {
     return [isAmount, isProduct];
   });
 
+  function isMobile() {
+    let agent = navigator.userAgent;
+
+    mobile.map((el) => {
+      if (sessionStorage.desktop) {
+        return false;
+      } else if (localStorage.mobile) {
+        return true;
+      }
+      
+      if (agent.toLowerCase().indexOf(el.toLowerCase()) > 0) {
+        return true;
+      } else {
+        return false;
+      }
+    });
+  }
   let mobile = [
     "iphone",
     "ipad",
@@ -33,24 +50,14 @@ const Data = ({ productInTheCart }) => {
     "iemobile",
   ];
 
-  function isMobile() {
-    let agent = navigator.userAgent;
-    mobile.map((el) => {
-      if (agent.toLowerCase().indexOf(el.toLowerCase()) > 0) {
-        return true;
-      }
-    });
-  }
-
   const urlDesktop = "https://web.whatsapp.com/";
-  const urlMobile = "https://api.whatsapp.com/";
+  const urlMobile = "whatsapp://";
   const telefono = "543517653448";
 
   const onSubmit = (e) => {
     e.preventDefault();
 
     let mensaje = `send?phone=${telefono}&text=*_Formulario Easy App CODE_*%0A*¿Cual es tu nombre?*%0A${form.nombre}%0A*¿Cuáles son tus apellidos?*%0A${form.apellido}`;
-    
     if (isMobile()) {
       window.open(urlMobile + mensaje, "_blank");
     } else {
@@ -93,7 +100,7 @@ const Data = ({ productInTheCart }) => {
         <button id="submit" type="submit" class="boton">
           <i class="fab fa-whatsapp"></i> Enviar WhatsApp
         </button>
-        C
+        FA
       </form>
     </>
   );
