@@ -51,7 +51,7 @@ const Data = ({ productInTheCart }) => {
   const onSubmit = (e) => {
     e.preventDefault();
 
-    let mensaje = `send?phone=${telefono}&text=*_Hola!, mi pedido es el siguiente:_*%0A*¿Cual es tu nombre?*%0A${form.nombre}%20${form.apellido}%0A*¿Cual es tu pedido?*%0A${products}*%0A¿Como es tu forma de entrega?${retiroPersonal && 'Lo retiro personalmente'}`;
+    let mensaje = `send?phone=${telefono}&text=*_Hola!, mi pedido es el siguiente:_*%0A*¿Cual es tu nombre?*%0A${form.nombre}%20${form.apellido}%0A*¿Cual es tu pedido?*%0A${products}*%0A¿Como es tu forma de entrega?${retiroPersonal && 'Lo retiro personalmente'}*%0A`;
     if (isMobile()) {
       window.open(urlMobile + mensaje, "_blank");
     } else {
