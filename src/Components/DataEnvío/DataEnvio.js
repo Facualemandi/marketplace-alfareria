@@ -73,7 +73,7 @@ const DataEnvio = ({ form, onChangeValue, setForm }) => {
           <p className="dpto_question">Es un departamento?</p>
           <section className="response">
             <span onClick={isDpto}>Si</span>
-            <span>No</span>
+            <span onClick={isDpto}>No</span>
           </section>
 
           {dpto && (
