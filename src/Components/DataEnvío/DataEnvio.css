@@ -76,3 +76,13 @@
   
 }
 
+.dpto_active{
+  background-color: rgb(210, 232, 255);
+  box-shadow: 1px 1px 2px 1px rgb(221, 221, 221);
+}
+.dpto_inactive{
+  background-color: rgb(210, 232, 255);
+  box-shadow: 1px 1px 2px 1px rgb(221, 221, 221);
+}
+
+

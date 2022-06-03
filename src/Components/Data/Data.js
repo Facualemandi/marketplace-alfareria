@@ -197,8 +197,7 @@ const Data = ({ productInTheCart }) => {
           form.apellido &&
           form.calle &&
           form.barrio &&
-          form.dpto &&
-          form.numero &&
+          form.numero  && 
           (transferencia || efectivo) && (
             <button id="submit" type="submit" className="form_btn">
               {" "}

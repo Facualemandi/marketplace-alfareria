@@ -21,6 +21,12 @@ const DataEnvio = ({ form, onChangeValue, setForm }) => {
     }
   }
 
+  const isNotDpto = () => {
+       if(dpto){
+         setDpto(false)
+       }
+  }
+
 
 
   console.log(form)
@@ -72,8 +78,8 @@ const DataEnvio = ({ form, onChangeValue, setForm }) => {
         <section className="section_dpto">
           <p className="dpto_question">Es un departamento?</p>
           <section className="response">
-            <span onClick={isDpto}>Si</span>
-            <span onClick={isDpto}>No</span>
+            <span onClick={isDpto} className={dpto && 'dpto_active'}>Si</span>
+            <span onClick={isNotDpto} className={!dpto && 'dpto_inactive'}>No</span>
           </section>
 
           {dpto && (
