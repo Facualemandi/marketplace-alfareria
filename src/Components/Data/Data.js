@@ -19,23 +19,13 @@ const Data = ({ productInTheCart }) => {
     const isProduct = el.name;
     const isAmount = `(x${el.amount})`;
 
-    return [isAmount, isProduct];
+    return [`${isAmount} ${isProduct}`];
   });
 
   function isMobile() {
     if (sessionStorage.desktop) return false;
     else if (localStorage.mobile) return true;
-    var mobile = [
-      "iphone",
-      "ipad",
-      "android",
-      "blackberry",
-      "nokia",
-      "opera mini",
-      "windows mobile",
-      "windows phone",
-      "iemobile",
-    ];
+    var mobile = [ "iphone", "ipad", "android", "blackberry", "nokia", "opera mini", "windows mobile", "windows phone", "iemobile"];
     for (var i in mobile)
       if (
         navigator.userAgent.toLowerCase().indexOf(mobile[i].toLowerCase()) > 0
