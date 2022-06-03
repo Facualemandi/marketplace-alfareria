@@ -90,7 +90,7 @@ const Data = ({ productInTheCart }) => {
           Los datos marcados con ( * ) son obligatorios
         </span>
         <div class="box_input">
-          <label>Nombre</label>
+          <label>Nombre: *</label>
           <input
             name="nombre"
             type="text"
@@ -100,7 +100,7 @@ const Data = ({ productInTheCart }) => {
           />
         </div>
         <div class="box_input">
-          <label>Apellido</label>
+          <label>Apellido: *</label>
           <input
             name="apellido"
             type="text"
@@ -110,7 +110,7 @@ const Data = ({ productInTheCart }) => {
           />
         </div>
 
-        <p className="form_entrega"> Forma de entrega:</p>
+        <p className="form_entrega"> Forma de entrega: *</p>
 
         <section className="section_entrega">
           <p
@@ -123,7 +123,7 @@ const Data = ({ productInTheCart }) => {
           <p className="form_envio_p">Necesito que me lo envíen</p>
         </section>
 
-        <p className="pago"> Forma de  pago:</p>
+        <p className="pago"> Forma de  pago: *</p>
 
         <section className="section_pago">
                <p className={`${efectivo && 'efectivo_active'}`} onClick={isEfectivo}>Efectivo</p>
