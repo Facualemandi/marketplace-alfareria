@@ -281,3 +281,21 @@
   text-align: center;
   height: 18px;
 }
+
+.section_name_surname{
+  border: 1px solid rgb(230, 230, 230);
+  padding: 15px;
+  border-radius: 10px;
+}
+.section_envio{
+  margin-top: 10px;
+  border: 1px solid rgb(230, 230, 230);
+  border-radius: 10px;
+}
+
+.section_forma_pago{
+  margin-top: 10px;
+  border: 1px solid rgb(230, 230, 230);
+  border-radius: 10px;
+  padding: 5px;
+}

@@ -22,12 +22,13 @@
 
 .total_total{
   display: flex;
-  width: 30vw;
-  font-family: 'Poppins', sans-serif;
+  width: 40vw;
+  font-family: 'Montserrat', sans-serif;
   font-size: 14px;
-  border-radius: 10px;
-  background-color: rgb(255, 249, 232);
+  background-color: rgb(249, 240, 209);
   padding: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 .total_total b {
   margin-left: 5px;
@@ -45,10 +46,13 @@
 .confirm_whatapp{
   color: black;
   display: flex;
-  width: 40vw;
-  font-family: 'Poppins', sans-serif;
+  justify-content: center;
+  font-weight: bold;
+  width: 50vw;
+  font-family: 'Montserrat', sans-serif;
   font-size: 14px;
-  border-radius: 10px;
-  background-color: rgb(255, 229, 187);
+  background-color: rgb(190, 234, 251);
   padding: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
 }

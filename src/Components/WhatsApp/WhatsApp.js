@@ -19,7 +19,7 @@ const WhatsApp = ({ productInTheCart, makeOrder }) => {
             Total: <b> ${totalTotal} </b>
           </p>
           <NavLink to="/orden">
-          <p className="confirm_whatapp" onClick={makeOrder}>Confirmar Pedido </p>
+          <p className="confirm_whatapp" onClick={makeOrder}> Finalizar Pedido </p>
           </NavLink>
             
         </section>

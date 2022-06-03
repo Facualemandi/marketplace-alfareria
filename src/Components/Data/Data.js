@@ -117,48 +117,53 @@ const Data = ({ productInTheCart }) => {
 
   return (
     <>
+      <h1 className="h1_form">Último paso</h1>
+
       <form id="formulario" className="formulario" onSubmit={onSubmit}>
-        <h1 className="h1_form">Último paso</h1>
-        <span className="form_spam">
-          Los datos marcados con ( * ) son obligatorios
-        </span>
-        <div class="box_input">
-          <label>Nombre: *</label>
-          <input
-            name="nombre"
-            type="text"
-            value={form.name}
-            onChange={onChangeValue}
-            required
-          />
-        </div>
-        <div class="box_input">
-          <label>Apellido: *</label>
-          <input
-            name="apellido"
-            type="text"
-            value={form.apellido}
-            onChange={onChangeValue}
-            required
-          />
-        </div>
+        <section className="section_name_surname">
+          <span className="form_spam">
+            Los datos marcados con ( * ) son obligatorios
+          </span>
+          <div class="box_input">
+            <label>Nombre: *</label>
+            <input
+              name="nombre"
+              type="text"
+              value={form.name}
+              onChange={onChangeValue}
+              required
+            />
+          </div>
+          <div class="box_input">
+            <label>Apellido: *</label>
+            <input
+              name="apellido"
+              type="text"
+              value={form.apellido}
+              onChange={onChangeValue}
+              required
+            />
+          </div>
+        </section>
 
-        <p className="form_entrega"> Forma de entrega: *</p>
+        <section className="section_envio">
+          <p className="form_entrega"> Forma de entrega: *</p>
 
-        <section className="section_entrega">
-          <p
-            onClick={isRetiroPersonal}
-            className={`personalmente ${retiroPersonal && "is-active"}`}
-          >
-            Lo retiro personalmente
-          </p>
+          <section className="section_entrega">
+            <p
+              onClick={isRetiroPersonal}
+              className={`personalmente ${retiroPersonal && "is-active"}`}
+            >
+              Lo retiro personalmente
+            </p>
 
-          <p
-            className={`form_envio_p ${envio && "is-active"}`}
-            onClick={isEnvio}
-          >
-            Necesito que me lo envíen
-          </p>
+            <p
+              className={`form_envio_p ${envio && "is-active"}`}
+              onClick={isEnvio}
+            >
+              Necesito que me lo envíen
+            </p>
+          </section>
         </section>
         {envio && (
           <DataEnvio
@@ -166,10 +171,11 @@ const Data = ({ productInTheCart }) => {
             setForm={setForm}
             onChangeValue={onChangeValue}
           />
-        )}
+          )}
 
-        <p className="pago"> Forma de pago: *</p>
 
+<section className="section_forma_pago">
+          <p className="pago"> Forma de pago: *</p>
         <section className="section_pago">
           <p
             className={`${efectivo && "efectivo_active"}`}
@@ -185,19 +191,24 @@ const Data = ({ productInTheCart }) => {
           </p>
         </section>
 
-        {form.nombre && form.apellido && retiroPersonal && (efectivo || transferencia) && (
-          <button id="submit" type="submit" className="form_btn">
-            {" "}
-            Envíar pedido por WhatsApp <RiWhatsappFill className="icon_wsp" />{" "}
-          </button>
-        )}
+</section>
+
+        {form.nombre &&
+          form.apellido &&
+          retiroPersonal &&
+          (efectivo || transferencia) && (
+            <button id="submit" type="submit" className="form_btn">
+              {" "}
+              Envíar pedido por WhatsApp <RiWhatsappFill className="icon_wsp" />{" "}
+            </button>
+          )}
 
         {envio &&
           form.nombre &&
           form.apellido &&
           form.calle &&
           form.barrio &&
-          form.numero  && 
+          form.numero &&
           (transferencia || efectivo) && (
             <button id="submit" type="submit" className="form_btn">
               {" "}
@@ -210,10 +221,3 @@ const Data = ({ productInTheCart }) => {
 };
 
 export default Data;
-
-// nombre: "",
-// apellido: "",
-// calle: "",
-// numero: "",
-// barrio: "",
-// dpto: "",

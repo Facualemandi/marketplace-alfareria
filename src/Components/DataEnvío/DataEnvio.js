@@ -5,6 +5,7 @@ import "./DataEnvio.css";
 
 const DataEnvio = ({ form, onChangeValue, setForm }) => {
   const [dpto, setDpto] = useState(false)
+  const [dptoFalse, setdptoFalse] = useState(false)
 
   const changeRadio = (e) => {
     setForm({
@@ -16,14 +17,16 @@ const DataEnvio = ({ form, onChangeValue, setForm }) => {
   const isDpto = () => {
     if(!dpto){
       setDpto(true)
+      setdptoFalse(false)
     }else{
       setDpto(false)
     }
   }
 
   const isNotDpto = () => {
-       if(dpto){
-         setDpto(false)
+       if(!dptoFalse){
+        setdptoFalse(true)
+        setDpto(false)
        }
   }
 
@@ -34,9 +37,9 @@ const DataEnvio = ({ form, onChangeValue, setForm }) => {
     <>
       <form className="container_form_second">
 
-        <p className="barrio"> Por favor, selecciona un barrio</p>
 
       <section className="section_inputs_radio">
+        <p className="barrio"> Por favor, selecciona un barrio</p>
 
          <section>
            <input className="inp_radio" type={'radio'} name='barrio' value='Los Paraisos'  onChange={changeRadio}/>
@@ -59,11 +62,11 @@ const DataEnvio = ({ form, onChangeValue, setForm }) => {
        </section>
 
     </section>
+ 
 
-
-
+        <section className="section_direccion">
+        
         <p className="direccion">Dirección:</p>
-        <section className="">
           <section className="section_direction">
             <label for="calle">Calle</label>
             <input type={"text"} name="calle" placeholder="dirección" value={form.calle} onChange={onChangeValue}/>
@@ -79,7 +82,7 @@ const DataEnvio = ({ form, onChangeValue, setForm }) => {
           <p className="dpto_question">Es un departamento?</p>
           <section className="response">
             <span onClick={isDpto} className={dpto && 'dpto_active'}>Si</span>
-            <span onClick={isNotDpto} className={!dpto && 'dpto_inactive'}>No</span>
+            <span onClick={isNotDpto} className={dptoFalse && 'dpto_inactive'}>No</span>
           </section>
 
           {dpto && (

@@ -1,5 +1,3 @@
-.container_form_second {
-}
 
 .direccion {
   font-family: "Montserrat", sans-serif;
@@ -22,13 +20,19 @@
   border-radius: 5px;
 }
 
+.response{
+  height: max-content;
+  padding: 10px;
+}
+
 .response span {
   font-family: "Montserrat", sans-serif;
   font-size: 12px;
-  padding: 5px;
-  margin: 5px;
   border: 1px solid rgb(184, 184, 184);
   border-radius: 5px;
+  padding: 10px;
+  margin: 5px;
+
 }
 
 .dpto_question {
@@ -46,43 +50,61 @@
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
 }
-.dpto_description input{
+.dpto_description input {
   height: 50px;
   border-radius: 5px;
   border: none;
   border: 1px solid rgb(208, 208, 208);
 }
 
-.section_inputs_radio{
+.section_inputs_radio {
   display: flex;
   flex-direction: column;
   font-family: "Montserrat", sans-serif;
   font-size: 12px;
   width: 90vw;
+  border: 1px solid rgb(224, 224, 224);
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 10px;
 }
 
-.section_inputs_radio section{
+.section_inputs_radio section {
   margin: 5px;
   padding: 5px;
+  border: 1px solid rgb(224, 224, 224);
+  border-radius: 5px;
 }
 
-.inp_radio{
+.inp_radio {
   margin-right: 5px;
 }
 
-.barrio{
+.barrio {
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
-  
 }
 
-.dpto_active{
+.dpto_active {
   background-color: rgb(210, 232, 255);
   box-shadow: 1px 1px 2px 1px rgb(221, 221, 221);
 }
-.dpto_inactive{
+.dpto_inactive {
   background-color: rgb(210, 232, 255);
   box-shadow: 1px 1px 2px 1px rgb(221, 221, 221);
 }
 
+.section_direccion {
+  padding: 5px;
+  border: 1px solid rgb(224, 224, 224);
+  border-radius: 10px;
+  margin-top: 15px;
+}
 
+.section_dpto {
+  border: 1px solid rgb(224, 224, 224);
+  border-radius: 10px;
+  margin-top: 15px;
+  padding: 10px;
+  padding-bottom: 10px;
+}
