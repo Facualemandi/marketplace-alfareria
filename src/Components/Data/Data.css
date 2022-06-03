@@ -227,7 +227,7 @@
   border-radius: 5px;
 }
 
-.form_btn{
+.form_btn {
   padding: 15px;
   font-family: "Montserrat", sans-serif;
   font-size: 12px;
@@ -237,4 +237,36 @@
   background-color: rgb(205, 229, 255);
   border: none;
   border-radius: 3px;
+}
+
+.pago {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  margin-top: 15px;
+}
+
+.section_pago {
+  display: flex;
+}
+
+.section_pago p {
+  font-family: "Montserrat", sans-serif;
+  border: 1px solid rgb(228, 228, 228);
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+.efectivo_active {
+  background-color: rgb(210, 232, 255);
+  box-shadow: 1px 1px 2px 1px rgb(221, 221, 221);
+}
+
+.icon_wsp{
+  color: rgb(9, 158, 9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 18px;
 }
