@@ -19,7 +19,7 @@ const Data = ({ productInTheCart }) => {
     const isProduct = el.name;
     const isAmount = `(x${el.amount})`;
 
-    return [`${isAmount} ${isProduct}`];
+    return [`${isProduct}${isAmount}`];
   });
 
   function isMobile() {
