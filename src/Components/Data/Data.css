@@ -167,8 +167,15 @@
 .h1_form {
   display: flex;
   justify-content: center;
+  align-items: center;
+  text-align: center;
   font-family: "Montserrat", sans-serif;
-  font-size: 24px;
+  font-size: 18px;
+  border-radius: 10px;
+  width: 80vw;
+  margin: auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 .form_spam {
   font-size: 10px;
@@ -298,4 +305,9 @@
   border: 1px solid rgb(230, 230, 230);
   border-radius: 10px;
   padding: 5px;
+}
+
+.section_h1_form{
+  width: 100vw;
+  background-color: aliceblue;
 }

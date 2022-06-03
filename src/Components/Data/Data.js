@@ -117,7 +117,11 @@ const Data = ({ productInTheCart }) => {
 
   return (
     <>
-      <h1 className="h1_form">Último paso</h1>
+    <section className="section_h1_form">
+      <h1 className="h1_form">Por favor, complete todos los datos.</h1>
+
+    </section>
+
 
       <form id="formulario" className="formulario" onSubmit={onSubmit}>
         <section className="section_name_surname">
