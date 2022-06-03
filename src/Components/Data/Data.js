@@ -17,7 +17,7 @@ const Data = ({ productInTheCart }) => {
 
   const products = productInTheCart.map((el) => {
     const isProduct = el.name;
-    const isAmount = `x(${el.amount})`;
+    const isAmount = `(x${el.amount})`;
 
     return [isAmount, isProduct];
   });
@@ -51,7 +51,13 @@ const Data = ({ productInTheCart }) => {
   const onSubmit = (e) => {
     e.preventDefault();
 
-    let mensaje = `send?phone=${telefono}&text=*_Hola!, mi pedido es el siguiente:_*%0A*¿Cual es tu nombre?*%0A${form.nombre}%20${form.apellido}%0A*¿Cual es tu pedido?*%0A${products}*%0A¿Como es tu forma de entrega?${retiroPersonal && 'Lo retiro personalmente'}*%0A`;
+    let mensaje = `send?phone=${telefono}&text=*_Hola!, mi pedido es el siguiente:_*%0A*¿Cual es tu nombre?*%0A${
+      form.nombre
+    }%20${
+      form.apellido
+    }%0A*¿Cual es tu pedido?*%0A${products}%0A*¿Como es tu forma de entrega?*%0A${
+      retiroPersonal && "Lo retiro personalmente"
+    }`;
     if (isMobile()) {
       window.open(urlMobile + mensaje, "_blank");
     } else {
@@ -75,9 +81,13 @@ const Data = ({ productInTheCart }) => {
   };
   return (
     <>
-      <form id="formulario" class="formulario" onSubmit={onSubmit}>
-        <h1>Último paso</h1>
-        <div class="box-input">
+      <form id="formulario" className="formulario" onSubmit={onSubmit}>
+        <h1 className="h1_form">Último paso</h1>
+        <span className="form_spam">
+          Los datos marcados con ( * ) son obligatorios
+        </span>
+        <div class="box_input">
+          <label>Nombre</label>
           <input
             name="nombre"
             type="text"
@@ -85,9 +95,9 @@ const Data = ({ productInTheCart }) => {
             onChange={onChangeValue}
             required
           />
-          <label>Nombre</label>
         </div>
-        <div class="box-input">
+        <div class="box_input">
+          <label>Apellido</label>
           <input
             name="apellido"
             type="text"
@@ -95,20 +105,22 @@ const Data = ({ productInTheCart }) => {
             onChange={onChangeValue}
             required
           />
-          <label>Apellido</label>
         </div>
 
-        <p> Forma de entrega:</p>
+        <p className="form_entrega"> Forma de entrega:</p>
 
         <section className="section_entrega">
-          <p onClick={isRetiroPersonal} className={`personalmente ${retiroPersonal && 'is-active'}`}>
+          <p
+            onClick={isRetiroPersonal}
+            className={`personalmente ${retiroPersonal && "is-active"}`}
+          >
             Lo retiro personalmente
           </p>
+
+          <p className="form_envio_p">Necesito que me lo envíen</p>
         </section>
 
-        <button id="submit" type="submit" class="boton">
-          <i class="fab fa-whatsapp"></i> Enviar WhatsApp
-        </button>
+        {form.nombre && form.apellido && retiroPersonal &&  <button id="submit" type="submit" className="form_btn">  Enviar WhatsApp </button>}
       </form>
     </>
   );

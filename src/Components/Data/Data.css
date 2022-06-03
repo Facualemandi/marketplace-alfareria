@@ -127,7 +127,6 @@
   box-shadow: 1px 1px 2px 1px rgb(191, 191, 191);
 }
 
-
 .forma_pago_true {
   background-color: rgb(206, 233, 255);
   box-shadow: 1px 1px 2px 1px rgb(191, 191, 191);
@@ -153,12 +152,57 @@
   margin-top: 15px;
 }
 
-.section_entrega{
+.section_entrega {
   width: 100vw;
   margin: auto;
   padding: 10px;
 }
-.personalmente{
+
+.formulario {
+  width: 90vw;
+  margin: auto;
+}
+
+.h1_form {
+  display: flex;
+  justify-content: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+}
+.form_spam {
+  font-size: 10px;
+  color: rgb(252, 157, 62);
+  font-family: "Montserrat", sans-serif;
+}
+
+.box_input {
+  display: flex;
+  flex-direction: column;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.box_input input {
+  border: 1px solid rgb(234, 234, 234);
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.form_entrega {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  margin-top: 15px;
+}
+
+.section_entrega {
+  width: 90vw;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+}
+
+.personalmente {
   font-family: "Montserrat", sans-serif;
   border: 1px solid rgb(221, 221, 221);
   font-size: 14px;
@@ -168,7 +212,29 @@
   border-radius: 5px;
 }
 
-.personalmente.is-active{
+.personalmente.is-active {
   background-color: rgb(210, 232, 255);
   box-shadow: 1px 1px 2px 1px rgb(221, 221, 221);
+}
+
+.form_envio_p {
+  font-family: "Montserrat", sans-serif;
+  border: 1px solid rgb(221, 221, 221);
+  font-size: 14px;
+  width: 40vw;
+  text-align: center;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.form_btn{
+  padding: 15px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  display: flex;
+  margin: auto;
+  margin-top: 15px;
+  background-color: rgb(205, 229, 255);
+  border: none;
+  border-radius: 3px;
 }
