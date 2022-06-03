@@ -5,6 +5,7 @@
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
   padding-left: 10px;
+  margin-top: 15px;
 }
 
 .section_direction {
@@ -22,6 +23,8 @@
 }
 
 .response span {
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
   padding: 5px;
   margin: 5px;
   border: 1px solid rgb(184, 184, 184);
@@ -44,8 +47,32 @@
   font-size: 14px;
 }
 .dpto_description input{
-    height: 50px;
-    border-radius: 5px;
-    border: none;
-    border: 1px solid rgb(208, 208, 208);
+  height: 50px;
+  border-radius: 5px;
+  border: none;
+  border: 1px solid rgb(208, 208, 208);
 }
+
+.section_inputs_radio{
+  display: flex;
+  flex-direction: column;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  width: 90vw;
+}
+
+.section_inputs_radio section{
+  margin: 5px;
+  padding: 5px;
+}
+
+.inp_radio{
+  margin-right: 5px;
+}
+
+.barrio{
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  
+}
+

@@ -1,6 +1,7 @@
 import "./Data.css";
 import React, { useState } from "react";
 import { RiWhatsappFill } from "react-icons/ri";
+import DataEnvio from "../DataEnvío/DataEnvio";
 
 
 const initialValue = {
@@ -8,18 +9,22 @@ const initialValue = {
   apellido: "",
   calle: "",
   numero: "",
+  barrio: "",
+  dpto: "",
 };
 
 const Data = ({ productInTheCart }) => {
   const [form, setForm] = useState(initialValue);
   const [retiroPersonal, setRetiroPersonal] = useState(false);
   const [efectivo, setEfectivo] = useState(false)
+  const [transferencia, setTransferencia] = useState(false)
+  const [envio, setEnvio] = useState(false)
 
   const products = productInTheCart.map((el) => {
     const isProduct = el.name;
     const isAmount = `(x${el.amount})`;
 
-    return [`${isProduct}${isAmount}`];
+    return [`%0A${isProduct}${isAmount}%0A`];
   });
 
   function isMobile() {
@@ -41,7 +46,7 @@ const Data = ({ productInTheCart }) => {
   const onSubmit = (e) => {
     e.preventDefault();
 
-    let mensaje = `send?phone=${telefono}&text=*_Hola!, mi pedido es el siguiente:_*%0A*¿Cual es tu nombre?*%0A${form.nombre}%20${form.apellido}%0A*¿Cual es tu pedido?*%0A${products}%0A*¿Como es tu forma de entrega?*%0A${ retiroPersonal && "Lo retiro personalmente"}%0A*Como es tu forma de pago?*%0A${efectivo && 'Efectivo'}`;
+    let mensaje = `send?phone=${telefono}&text=*_Hola!, mi pedido es el siguiente:_*%0A*¿Cual es tu nombre?*%0A${form.nombre}%20${form.apellido}%0A*¿Cual es tu pedido?*%0A${products.join('')}%0A*¿Como es tu forma de entrega?*%0A${ retiroPersonal && "Lo retiro personalmente"}%0A*Como es tu forma de pago?*%0A${efectivo && 'Efectivo'}`;
     if (isMobile()) {
       window.open(urlMobile + mensaje, "_blank");
     } else {
@@ -59,18 +64,42 @@ const Data = ({ productInTheCart }) => {
   const isRetiroPersonal = () => {
     if (!retiroPersonal) {
       setRetiroPersonal(true);
+      setEnvio(false)
     } else {
       setRetiroPersonal(false);
     }
   };
 
+  const isEnvio = () => {
+    if(!envio){
+      setEnvio(true)
+      setRetiroPersonal(false);
+    }else{
+      setEnvio(false)
+    }
+  }
+
+
+
   const isEfectivo = () => {
       if(!efectivo){
         setEfectivo(true)
+        setTransferencia(false)
       }else{
         setEfectivo(false)
       }
   }
+  const isTransferencia = () => {
+         if(!transferencia){
+           setTransferencia(true)
+           setEfectivo(false)
+         }else{
+           setTransferencia(false)
+         }
+  }
+  
+
+
 
   return (
     <>
@@ -110,20 +139,30 @@ const Data = ({ productInTheCart }) => {
             Lo retiro personalmente
           </p>
 
-          <p className="form_envio_p">Necesito que me lo envíen</p>
+          <p className={`form_envio_p ${envio && 'is-active'}`} onClick={isEnvio} >Necesito que me lo envíen</p>
+
         </section>
+            {
+              envio && <DataEnvio form={form} setForm={setForm} onChangeValue={onChangeValue}/>
+            }
 
         <p className="pago"> Forma de  pago: *</p>
 
         <section className="section_pago">
                <p className={`${efectivo && 'efectivo_active'}`} onClick={isEfectivo}>Efectivo</p>
-               <p>Transferencia</p>
+               <p className={`${transferencia && 'trasnferencia_active'}`}  onClick={isTransferencia}>Transferencia</p>
         </section>
 
 
         {
         form.nombre && form.apellido && retiroPersonal && efectivo &&  
-        <button id="submit" type="submit" className="form_btn">  Envíar pedido por WhatsApp <RiWhatsappFill className='icon_wsp'/> </button>}
+        <button id="submit" type="submit" className="form_btn">  Envíar pedido por WhatsApp <RiWhatsappFill className='icon_wsp'/> </button>
+        }
+
+        {
+        form.nombre && form.apellido && retiroPersonal && efectivo &&  
+        <button id="submit" type="submit" className="form_btn">  Envíar pedido por WhatsApp <RiWhatsappFill className='icon_wsp'/> </button>
+        }
       </form>
     </>
   );
