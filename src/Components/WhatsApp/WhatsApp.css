@@ -1,11 +1,9 @@
 .section_whatsapp {
   width: 90vw;
-  margin: 1vh auto;
   color: black;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-bottom: 2vh;
 }
 
 .section_whatsapp a {
@@ -31,16 +29,16 @@
   border-bottom-left-radius: 5px;
 }
 .total_total b {
-  margin-left: 5px;
   font-family: 'Montserrat', sans-serif;
+  margin-left: 5px;
 }
 
 .section_total_total_whatapp{
-  width: 90vw;
+  width: 100vw;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  padding: 5px;
   margin: auto;
+  margin-bottom: 2vh;
 }
 
 .confirm_whatapp{
@@ -48,7 +46,7 @@
   display: flex;
   justify-content: center;
   font-weight: bold;
-  width: 50vw;
+  width: 60vw;
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   background-color: rgb(209, 239, 250);

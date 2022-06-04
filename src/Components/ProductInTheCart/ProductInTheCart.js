@@ -11,7 +11,6 @@ const ProductInTheCart = ({
   newCount,
   newElementInCart,
   setNewCount,
-  makeOrder
 }) => {
 
   
@@ -62,7 +61,7 @@ const ProductInTheCart = ({
    
    
          
-         {productValue.length > 0 &&  <WhatsApp productInTheCart={productInTheCart} makeOrder={makeOrder} />}
+         {productValue.length > 0 &&  <WhatsApp productInTheCart={productInTheCart}/>}
         
     </>
   );

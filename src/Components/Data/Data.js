@@ -61,11 +61,14 @@ const Data = ({ productInTheCart }) => {
       ""
     )}%0A*¿Forma de entrega?*%0A${
       retiroPersonal ? "Lo retiro personalmente" : "Necesito que me lo envíen"
-    }%0A*Forma de pago?*%0A${efectivo ? "Efectivo" : "Transferencia"}%0A*${
-      form.calle && "Dirección"
-    }*%0A${form.calle}%0A*${form.numero && "Numero:"}*%0A${form.numero}%0A*${
-      form.barrio && "Barrio:"
-    }*%0A${form.barrio}%0A*${form.dpto && "Dpto:"}*%0A${form.dpto}`;
+    }%0A*Forma de pago?*%0A${efectivo ? "Efectivo" : "Transferencia"}
+    
+    %0A*${form.calle && "Dirección"}*%0A${form.calle}%0A*${
+      form.numero && "Numero:"
+    }*%0A${form.numero}%0A*${form.barrio && "Barrio:"}*%0A${form.barrio}%0A*${
+      form.dpto && "Dpto:"
+    }*%0A${form.dpto}`;
+
     if (isMobile()) {
       window.open(urlMobile + mensaje, "_blank");
     } else {
@@ -117,11 +120,9 @@ const Data = ({ productInTheCart }) => {
 
   return (
     <>
-    <section className="section">
-      <h1 className="h1_form">Por favor, complete todos los datos.</h1>
-
-    </section>
-
+      <section className="section">
+        <h1 className="h1_form">Por favor, complete todos los datos.</h1>
+      </section>
 
       <form id="formulario" className="formulario" onSubmit={onSubmit}>
         <section className="section_name_surname">
@@ -175,27 +176,25 @@ const Data = ({ productInTheCart }) => {
             setForm={setForm}
             onChangeValue={onChangeValue}
           />
-          )}
+        )}
 
-
-<section className="section_forma_pago">
+        <section className="section_forma_pago">
           <p className="pago"> Forma de pago: *</p>
-        <section className="section_pago">
-          <p
-            className={`${efectivo && "efectivo_active"}`}
-            onClick={isEfectivo}
-          >
-            Efectivo
-          </p>
-          <p
-            className={`${transferencia && "trasnferencia_active"}`}
-            onClick={isTransferencia}
-          >
-            Transferencia
-          </p>
+          <section className="section_pago">
+            <p
+              className={`${efectivo && "efectivo_active"}`}
+              onClick={isEfectivo}
+            >
+              Efectivo
+            </p>
+            <p
+              className={`${transferencia && "trasnferencia_active"}`}
+              onClick={isTransferencia}
+            >
+              Transferencia
+            </p>
+          </section>
         </section>
-
-</section>
 
         {form.nombre &&
           form.apellido &&
