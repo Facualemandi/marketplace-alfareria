@@ -11,7 +11,6 @@ const ProductInTheCart = ({
   newCount,
   newElementInCart,
   setNewCount,
-  addCount,
   makeOrder
 }) => {
 
@@ -25,7 +24,6 @@ const ProductInTheCart = ({
     newObj.splice(isDelete, 1);
     setProductInTheCart(newObj);
   };
-
 
 
 
@@ -60,7 +58,11 @@ const ProductInTheCart = ({
       
       )}
          
-         {productValue.length > 0 &&  <WhatsApp productInTheCart={productInTheCart} makeOrder={makeOrder}/>}
+         
+   
+   
+         
+         {productValue.length > 0 &&  <WhatsApp productInTheCart={productInTheCart} makeOrder={makeOrder} />}
         
     </>
   );

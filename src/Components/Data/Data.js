@@ -117,7 +117,7 @@ const Data = ({ productInTheCart }) => {
 
   return (
     <>
-    <section className="section_h1_form">
+    <section className="section">
       <h1 className="h1_form">Por favor, complete todos los datos.</h1>
 
     </section>
