@@ -20,7 +20,6 @@ const AddCartProduct = ({ count, addProductCart, addCount, deleteCount, data, on
 
             <section>
                <button onClick={() => addProductCart(data, id)}>Add to Cart<BsCartPlus className='cart_plus'/></button>  
-              
             </section>  
 
              <button className='return' onClick={onReturn}> Volver </button>

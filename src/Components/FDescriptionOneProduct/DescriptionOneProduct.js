@@ -3,7 +3,6 @@ import AddCartProduct from "../GAddCartProduct/AddCartProduct";
 import ModalCheck from "../ModalCheck/ModalCheck";
 import "./DescriptionOneProduct.css";
 import IconModalCheck from "../IconModalCheck/IconModalCheck";
-import { GiCoffeeCup  } from "react-icons/gi";
 import { SiMaterialdesign  } from "react-icons/si";
 import { MdInvertColors   } from "react-icons/md";
 import { MdOutlineColorLens   } from "react-icons/md";
@@ -19,7 +18,6 @@ const DescriptionOneProduct = ({
   openModal,
   setOpenModal,
   onReturn,
-  makeOrder
 }) => {
   const { name, description, price, image, secondary, primary, material, size} = descriptionProduct;
 

@@ -21,17 +21,18 @@ function App() {
 
   const addProductCart = (data, id) => {
     if (productInTheCart.includes(data)) {
-      const asd = productInTheCart.find(obj => obj.id === id)
-          asd.amount = count;
-          setCount(0)
+      const asd = productInTheCart.find((obj) => obj.id === id);
+      asd.amount = count;
+      setCount(0);
     } else {
       setProductInTheCart([...productInTheCart, data]);
       setOpenModal(true);
+      setTimeout(() => {
+        setOpenModal(false);
+      }, 700);
       setNewId(id);
     }
   };
-
-
 
   useEffect(() => {
     productInTheCart.find((obj) => {
@@ -51,8 +52,6 @@ function App() {
   const onReturn = () => {
     nav("/");
   };
-
-
 
   return (
     <>
@@ -87,7 +86,10 @@ function App() {
               />
             }
           />
-            <Route path="/orden" element={<Data productInTheCart={productInTheCart}/>}/>
+          <Route
+            path="/orden"
+            element={<Data productInTheCart={productInTheCart} />}
+          />
         </Routes>
       )}
     </>
