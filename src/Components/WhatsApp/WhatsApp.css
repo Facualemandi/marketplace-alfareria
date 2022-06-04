@@ -20,10 +20,10 @@
   color: rgb(1, 138, 37);
 }
 
-.total_total{
+.total_total {
   display: flex;
   width: 40vw;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 14px;
   background-color: rgb(249, 240, 209);
   padding: 10px;
@@ -32,10 +32,10 @@
 }
 .total_total b {
   margin-left: 5px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
-.section_total_total_whatapp{
+.section_total_total_whatapp {
   width: 90vw;
   display: flex;
   justify-content: space-between;
@@ -43,13 +43,13 @@
   margin: auto;
 }
 
-.confirm_whatapp{
+.confirm_whatapp {
   color: black;
   display: flex;
   justify-content: center;
   font-weight: bold;
   width: 50vw;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 14px;
   background-color: rgb(209, 239, 250);
   padding: 10px;
