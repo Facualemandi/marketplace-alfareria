@@ -41,7 +41,6 @@ function App() {
       if (obj.id === newId) {
         obj.amount = count;
         setNewCount(obj.amount);
-        setCount(0);
       }
     });
   }, [productInTheCart]);
@@ -54,7 +53,6 @@ function App() {
   const onReturn = () => {
     nav("/");
   };
-
   return (
     <>
       {loader && <Loader />}
