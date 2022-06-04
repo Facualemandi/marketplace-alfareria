@@ -1,6 +1,6 @@
 import "./AcumulationOfProductCart.css";
 import { RiDeleteBin6Line } from "react-icons/ri";
-import {  useState } from "react";
+import { useEffect, useState } from "react";
 
 const AcumulationOfProductCart = ({
   deleteObj,
@@ -22,7 +22,6 @@ const AcumulationOfProductCart = ({
       setIsNewAmount(el.amount)
      }
   };
-  
   const deleteAmount = (el) => {
     if(el.amount === 1){
            setIsNewAmount(1)
@@ -31,6 +30,8 @@ const AcumulationOfProductCart = ({
       setIsNewAmount(el.amount)
      }
   };
+
+
 
 
 

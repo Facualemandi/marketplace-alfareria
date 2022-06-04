@@ -20,19 +20,17 @@ function App() {
   const [newId, setNewId] = useState();
 
   const addProductCart = (data, id) => {
-    if(count > 0){
-      if (productInTheCart.includes(data)) {
-        const asd = productInTheCart.find((obj) => obj.id === id);
-        asd.amount = count;
-        setCount(0);
-      } else {
-        setProductInTheCart([...productInTheCart, data]);
-        setOpenModal(true);
-        setTimeout(() => {
-          setOpenModal(false);
-        }, 700);
-        setNewId(id);
-      }
+    if (productInTheCart.includes(data)) {
+      const asd = productInTheCart.find((obj) => obj.id === id);
+      asd.amount = count;
+      setCount(0);
+    } else {
+      setProductInTheCart([...productInTheCart, data]);
+      setOpenModal(true);
+      setTimeout(() => {
+        setOpenModal(false);
+      }, 700);
+      setNewId(id);
     }
   };
 
@@ -41,6 +39,7 @@ function App() {
       if (obj.id === newId) {
         obj.amount = count;
         setNewCount(obj.amount);
+        setCount(0);
       }
     });
   }, [productInTheCart]);
@@ -53,6 +52,7 @@ function App() {
   const onReturn = () => {
     nav("/");
   };
+
   return (
     <>
       {loader && <Loader />}
