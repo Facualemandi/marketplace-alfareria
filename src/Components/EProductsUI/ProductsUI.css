@@ -50,6 +50,7 @@
 
 .section_products_ui {
   position: relative;
+  padding: 5px;
 }
 
 .icon_more_products {

@@ -20,7 +20,7 @@ function App() {
   const [newId, setNewId] = useState();
 
   const addProductCart = (data, id) => {
-    if (count > 0) {
+    if(count > 0){
       if (productInTheCart.includes(data)) {
         const asd = productInTheCart.find((obj) => obj.id === id);
         asd.amount = count;
@@ -33,6 +33,7 @@ function App() {
         }, 700);
         setNewId(id);
       }
+
     }
   };
 
