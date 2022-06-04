@@ -20,17 +20,19 @@ function App() {
   const [newId, setNewId] = useState();
 
   const addProductCart = (data, id) => {
-    if (productInTheCart.includes(data)) {
-      const asd = productInTheCart.find((obj) => obj.id === id);
-      asd.amount = count;
-      setCount(0);
-    } else {
-      setProductInTheCart([...productInTheCart, data]);
-      setOpenModal(true);
-      setTimeout(() => {
-        setOpenModal(false);
-      }, 700);
-      setNewId(id);
+    if(count > 0){
+      if (productInTheCart.includes(data)) {
+        const asd = productInTheCart.find((obj) => obj.id === id);
+        asd.amount = count;
+        setCount(0);
+      } else {
+        setProductInTheCart([...productInTheCart, data]);
+        setOpenModal(true);
+        setTimeout(() => {
+          setOpenModal(false);
+        }, 700);
+        setNewId(id);
+      }
     }
   };
 

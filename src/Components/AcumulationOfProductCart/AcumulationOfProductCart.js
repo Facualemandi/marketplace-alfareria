@@ -1,6 +1,6 @@
 import "./AcumulationOfProductCart.css";
 import { RiDeleteBin6Line } from "react-icons/ri";
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 
 const AcumulationOfProductCart = ({
   deleteObj,
@@ -30,8 +30,6 @@ const AcumulationOfProductCart = ({
       setIsNewAmount(el.amount)
      }
   };
-
-
 
 
 

@@ -1,24 +1,32 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { RiWhatsappFill } from "react-icons/ri";
 import { NavLink } from "react-router-dom";
 import "./WhatsApp.css";
 
 const WhatsApp = ({ productInTheCart, makeOrder }) => {
-  
   const prectioTotal = Object.values(productInTheCart).map((el) => {
     let totalAmount = el.amount;
     let price = el.price;
     return totalAmount * price;
   });
-  
-  console.log(prectioTotal)
 
+  
+  const totalTotal = prectioTotal.reduce((a, b) => a + b, 0)
+  
+  console.log(totalTotal)
+  
+  useEffect(() => {
+
+    
+
+  }, [prectioTotal])
 
   return (
     <>
       <section className="section_whatsapp">
         <section className="section_total_total_whatapp">
           <p className="total_total">
-            Total: <b> ${prectioTotal} </b>
+            Total: <b> ${totalTotal} </b>
           </p>
           <NavLink to="/orden">
           <p className="confirm_whatapp" onClick={makeOrder}>Finalizar pedido</p>
