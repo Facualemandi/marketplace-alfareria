@@ -30,7 +30,7 @@ function App() {
         setOpenModal(true);
         setTimeout(() => {
           setOpenModal(false);
-        }, 700);
+        }, 1000);
         setNewId(id);
       }
 

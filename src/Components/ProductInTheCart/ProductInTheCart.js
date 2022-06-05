@@ -16,8 +16,8 @@ const ProductInTheCart = ({
 
   
   const productValue = Object.values(productInTheCart);
-
-
+  
+  
   const deleteObj = (id) => {
     const isDelete = productValue.findIndex((el) => el.id === id);
     const newObj = [...productValue];
@@ -25,8 +25,10 @@ const ProductInTheCart = ({
     setProductInTheCart(newObj);
   };
 
-
-
+  
+  
+  const [prices, setPrices] = useState([])
+  
   return (
     <>
       {!productValue.length ? (
@@ -51,6 +53,8 @@ const ProductInTheCart = ({
             newCount={newCount}
             setNewCount={setNewCount}
             newElementInCart={newElementInCart}
+            setPrices={setPrices}
+            prices={prices}
             
 
           />

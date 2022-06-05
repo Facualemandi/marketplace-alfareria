@@ -10,36 +10,35 @@ const AcumulationOfProductCart = ({
   id,
   amount,
   el,
+  setPrices,
+  prices,
 }) => {
-  
-  const [isNewAmount, setIsNewAmount] = useState(amount)
-  
+  const [isNewAmount, setIsNewAmount] = useState(amount);
+
   const totalValue = isNewAmount * price;
-  
+
   const newAmount = (el) => {
-    if(amount > 0){
-      el.amount = el.amount + 1
-      setIsNewAmount(el.amount)
-     }
+    if (amount > 0) {
+      el.amount = el.amount + 1;
+      setIsNewAmount(el.amount);
+    }
   };
   const deleteAmount = (el) => {
-    if(el.amount === 1){
-           setIsNewAmount(1)
-     }else{
-      el.amount = el.amount - 1
-      setIsNewAmount(el.amount)
-     }
+    if (el.amount === 1) {
+      setIsNewAmount(1);
+    } else {
+      el.amount = el.amount - 1;
+      setIsNewAmount(el.amount);
+    }
   };
 
-
-
-
+  useEffect(() => {
+    if (isNewAmount) setPrices((prevState) => [...prevState, totalValue]);
+  }, [isNewAmount]);
 
   
-
   return (
     <>
-    
       <section className="container_acumulation_procut">
         <img src={image} alt={name} className="img_acumulation_product" />
 
@@ -51,7 +50,6 @@ const AcumulationOfProductCart = ({
 
         <section className="section_acumulation_cart">
           <p className="count_acumulation">x{isNewAmount}</p>
-  
 
           <section className="acumulation_add_minus_cart">
             <button onClick={() => deleteAmount(el)}>-</button>
@@ -65,7 +63,6 @@ const AcumulationOfProductCart = ({
           className="icon_delete_cart"
         />
       </section>
-  
     </>
   );
 };
