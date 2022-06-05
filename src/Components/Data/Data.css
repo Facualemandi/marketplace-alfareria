@@ -311,3 +311,14 @@
   width: 100vw;
   background-color: aliceblue;
 }
+
+
+@media (min-width: 850px){
+  .formulario{
+    width: 60vw;
+  }
+
+  .section_entrega{
+    width: 60vw;
+  }
+}

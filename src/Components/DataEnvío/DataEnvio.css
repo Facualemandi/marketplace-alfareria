@@ -108,3 +108,10 @@
   padding: 10px;
   padding-bottom: 10px;
 }
+
+
+@media (min-width: 850px){
+ .section_inputs_radio{
+   width: 60vw;
+ }
+}

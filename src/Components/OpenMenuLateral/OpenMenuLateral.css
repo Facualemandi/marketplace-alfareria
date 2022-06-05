@@ -37,10 +37,11 @@
 
   .ul_menu_lateral_desktop{
     display: flex;
+    justify-content: space-between;
+    width: 70vh;
   }
 
   .ul_menu_lateral_desktop li{
-    width: 10vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -50,6 +51,7 @@
     padding: 5px;
     margin: 15px;
     border-radius: 5px;
+    font-size: 12px;
   }
      
 }
@@ -57,11 +59,10 @@
 
   .ul_menu_lateral_desktop{
     display: flex;
-    width: 40vw;
+    width: 70vh;
   }
 
   .ul_menu_lateral_desktop li{
-    width: 10vw;
     display: flex;
     justify-content: center;
     align-items: center;
