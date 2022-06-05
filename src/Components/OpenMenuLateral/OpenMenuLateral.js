@@ -16,6 +16,15 @@ const OpenMenuLateral = ({openMenu}) => {
              <li> <FcInfo className='icon_menu_lateral'/> Mas información</li>
            </ul>
          </section>}
+
+         <section>
+          <ul className='ul_menu_lateral_desktop'>
+             <li> <BiHomeAlt className='icon_menu_lateral'/> Home </li>
+             <li> <RiContactsLine className='icon_menu_lateral'/> Contacto</li>
+             <li> <IoMdContacts className='icon_menu_lateral'/> Sobe nosotros</li>
+             <li> <FcInfo className='icon_menu_lateral'/> Mas información</li>
+           </ul>
+         </section>
         
       </>
 

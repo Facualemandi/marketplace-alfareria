@@ -67,3 +67,18 @@
 .secttion_description_one_product{
   margin-top: 3vh;
 }
+
+@media (min-width: 850px){
+  .img_description_one{
+    width: 40vw;
+    height: 350px;
+  }
+  .section_description_one{
+    width: 40vw;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  .container_buttons_add{
+    width: 40vw;
+  }
+}

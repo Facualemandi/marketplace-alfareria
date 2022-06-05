@@ -10,7 +10,6 @@ const WhatsApp = ({ productInTheCart, makeOrder }) => {
   });
 
   let totalTotal = prectioTotal.reduce((a, b) => a + b, 0);
-  console.log(totalTotal);
 
   return (
     <>

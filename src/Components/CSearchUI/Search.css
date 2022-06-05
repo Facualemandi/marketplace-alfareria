@@ -64,3 +64,22 @@
   border: 1px solid rgb(168, 217, 246) !important;
   font-weight: bold;
 }
+
+@media (min-width: 850px){
+  .section_search{
+    width: 80vw;
+  }
+
+  .categories{
+    width: 80vw;
+  }
+}
+@media (min-width: 1350px){
+  .section_search{
+    width: 60vw;
+    margin: auto;
+  }
+  .categories{
+    width: 60vw;
+  }
+}

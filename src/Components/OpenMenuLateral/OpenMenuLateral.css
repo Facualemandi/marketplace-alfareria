@@ -27,3 +27,50 @@
 .icon_menu_lateral {
   margin-right: 10px;
 }
+
+.ul_menu_lateral_desktop{
+  display: none;
+}
+
+
+@media (min-width: 800px){
+
+  .ul_menu_lateral_desktop{
+    display: flex;
+  }
+
+  .ul_menu_lateral_desktop li{
+    width: 10vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 10px;
+    font-family: sans-serif;
+    padding: 5px;
+    margin: 15px;
+    border-radius: 5px;
+  }
+     
+}
+@media (min-width: 1350px){
+
+  .ul_menu_lateral_desktop{
+    display: flex;
+    width: 40vw;
+  }
+
+  .ul_menu_lateral_desktop li{
+    width: 10vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 14px;
+    font-family: sans-serif;
+    padding: 5px;
+    margin: 15px;
+    border-radius: 5px;
+  }
+     
+}

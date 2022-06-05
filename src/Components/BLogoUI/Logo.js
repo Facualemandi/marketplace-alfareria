@@ -18,14 +18,16 @@ const Logo = () => {
   return (
     <>
       <section className="container_total_logo">
-        <img src={LogoCeramica} alt="Ceramica Artesanal" className="logo" />
-        <p>Encontra y busca todo sobre Ceramica </p>
-
         <section>
-          <Menu handleOpenMenu={handleOpenMenu}  openMenu={openMenu}/>
+          <img src={LogoCeramica} alt="Ceramica Artesanal" className="logo" />
+          <p>Encontra y busca todo sobre Ceramica </p>
         </section>
 
-        <OpenMenuLateral openMenu={openMenu}/>
+        <section>
+          <Menu handleOpenMenu={handleOpenMenu} openMenu={openMenu} />
+        </section>
+
+        <OpenMenuLateral openMenu={openMenu} className="menu_lateral" />
       </section>
     </>
   );

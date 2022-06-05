@@ -1,8 +1,37 @@
 .main {
   margin-bottom: 10vh;
+ 
 }
 .section_product_continer_ui {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(100px);
 }
+
+@media (min-width: 850px){
+   .main{
+     width: 80vw;
+     margin: auto;
+   }
+   .section_product_continer_ui {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(100px);
+  }
+}
+
+@media (min-width: 1350px){
+
+  .main{
+    width: 60vw;
+    margin: auto;
+  }
+  .section_product_continer_ui {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(100px);
+  }
+}
+
+
+

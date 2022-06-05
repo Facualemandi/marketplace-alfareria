@@ -13,9 +13,9 @@ const AddCartProduct = ({ count, addProductCart, addCount, deleteCount, data, on
       <>
         <section className='container_buttons_add'>
             <section className='section_btns_add_minus'>
-               <button onClick={deleteCount}><AiOutlineMinus /></button>
-               <span>{count}</span>
-               <button onClick={addCount}><GrFormAdd/></button>
+               <button onClick={deleteCount} className='btm_add_cart'><AiOutlineMinus /></button>
+               <span className='span_cart'>{count}</span>
+               <button onClick={addCount} className='btn_minus_cart'><GrFormAdd/></button>
             </section>
 
             <section>
