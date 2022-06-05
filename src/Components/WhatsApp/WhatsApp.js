@@ -12,16 +12,6 @@ const WhatsApp = ({ productInTheCart, makeOrder }) => {
   let totalTotal = prectioTotal.reduce((a, b) => a + b, 0);
   console.log(totalTotal);
 
-  const [asdasd, setAsdasd] = useState(totalTotal);
-
-  console.log(asdasd)
-
-  useEffect(() => {
-
-   
-
-  }, []);
-  
   return (
     <>
       <section className="section_whatsapp">
