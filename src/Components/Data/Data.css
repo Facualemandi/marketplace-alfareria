@@ -231,11 +231,17 @@
   font-family: "Montserrat", sans-serif;
   font-size: 12px;
   display: flex;
-  margin: auto;
-  margin-top: 15px;
+  justify-content: center;
+  align-items: center;
   background-color: rgb(205, 229, 255);
   border: none;
   border-radius: 3px;
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  z-index: 3000;
+  width: 100vw;
+  height: 70px;
 }
 
 .pago {

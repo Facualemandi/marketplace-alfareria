@@ -56,3 +56,16 @@
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
 }
+
+@media (min-width: 850px) {
+  .section_whatsapp {
+    width: 60vw;
+    margin: auto;
+  }
+  .section_total_total_whatapp {
+    width: 60vw;
+  }
+  .confirm_whatapp {
+    width: 40vw;
+  }
+}

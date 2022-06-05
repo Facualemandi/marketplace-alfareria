@@ -32,6 +32,8 @@ const NavegationContainer = ({
         </section>
       )}
 
+<div className="div_container_nav">
+
       <nav className="nav_conatiner_cart">
         <section onClick={openCartPanel} className="section_iconcart_number">
           <section>
@@ -58,6 +60,7 @@ const NavegationContainer = ({
           </span>
         </section>
       </nav>
+</div>
     </>
   );
 };

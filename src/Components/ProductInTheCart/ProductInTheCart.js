@@ -11,13 +11,10 @@ const ProductInTheCart = ({
   newCount,
   newElementInCart,
   setNewCount,
-  makeOrder
+  makeOrder,
 }) => {
-
-  
   const productValue = Object.values(productInTheCart);
-  
-  
+
   const deleteObj = (id) => {
     const isDelete = productValue.findIndex((el) => el.id === id);
     const newObj = [...productValue];
@@ -25,10 +22,8 @@ const ProductInTheCart = ({
     setProductInTheCart(newObj);
   };
 
-  
-  
-  const [prices, setPrices] = useState([])
-  
+  const [prices, setPrices] = useState([]);
+
   return (
     <>
       {!productValue.length ? (
@@ -44,30 +39,16 @@ const ProductInTheCart = ({
             name={el.name}
             image={el.image}
             price={el.price}
-            count={count}
             amount={el.amount}
-            productValue={productValue}
             deleteObj={deleteObj}
-            productInTheCart={productInTheCart}
-            setProductInTheCart={setProductInTheCart}
-            newCount={newCount}
-            setNewCount={setNewCount}
-            newElementInCart={newElementInCart}
             setPrices={setPrices}
-            prices={prices}
-            
-
           />
         ))
-      
       )}
-         
-         
-   
-   
-         
-         {productValue.length > 0 &&  <WhatsApp productInTheCart={productInTheCart} makeOrder={makeOrder} />}
-        
+
+      {productValue.length > 0 && (
+        <WhatsApp productInTheCart={productInTheCart} makeOrder={makeOrder} />
+      )}
     </>
   );
 };

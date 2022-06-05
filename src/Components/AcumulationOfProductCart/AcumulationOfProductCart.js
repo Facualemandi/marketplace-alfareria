@@ -11,7 +11,6 @@ const AcumulationOfProductCart = ({
   amount,
   el,
   setPrices,
-  prices,
 }) => {
   const [isNewAmount, setIsNewAmount] = useState(amount);
 

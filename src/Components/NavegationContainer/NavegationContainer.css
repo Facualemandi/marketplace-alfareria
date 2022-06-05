@@ -85,9 +85,33 @@
   font-family: sans-serif;
   font-size: 14px;
 }
-.icon_darkmode{
+.icon_darkmode {
   width: 30px;
   height: 30px;
   color: grey;
   margin-right: 5vh;
 }
+
+@media (min-width: 850px){
+  .nav_conatiner_cart {
+    width: 60vw;
+    margin: auto;
+  }
+  .div_container_nav{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    bottom: 0px;
+    width: 100vw;
+    height: 70px;
+    background-color: rgb(255, 255, 255);
+    z-index: 1300;
+  }
+
+  .panel_container{
+    width: 100vw;
+  }
+}
+ 
