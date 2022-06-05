@@ -62,7 +62,7 @@ const Data = ({ productInTheCart }) => {
     )}%0A*¿Forma de entrega?*%0A${
       retiroPersonal ? "Lo retiro personalmente" : "Necesito que me lo envíen"
     }%0A*Forma de pago?*%0A${efectivo ? "Efectivo" : "Transferencia"}%0A*${
-      form.calle && "Dirección"
+      form.calle && "Dirección:"
     }*%0A${form.calle}%0A*${form.numero && "Numero:"}*%0A${form.numero}%0A*${
       form.barrio && "Barrio:"
     }*%0A${form.barrio}%0A*${form.dpto && "Dpto:"}*%0A${form.dpto}`;
