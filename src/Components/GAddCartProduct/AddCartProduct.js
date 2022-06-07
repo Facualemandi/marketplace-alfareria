@@ -19,7 +19,7 @@ const AddCartProduct = ({ count, addProductCart, addCount, deleteCount, data, on
             </section>
 
             <section>
-               <button onClick={() => addProductCart(data, id)}>Add to Cart<BsCartPlus className='cart_plus'/></button>  
+               <button onClick={() => addProductCart(data, id)} className='btn_add_cart_product'>Agregar al carrito<BsCartPlus className='cart_plus'/></button>  
             </section>  
 
              <button className='return' onClick={onReturn}> Volver </button>

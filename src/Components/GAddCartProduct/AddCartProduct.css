@@ -39,6 +39,7 @@
   background-color: rgb(253, 236, 225);
   padding: 1vh;
   margin-bottom: 15vh;
+  cursor: pointer;
 }
 
 .section_btns_add_minus {
@@ -49,6 +50,16 @@
   background-color: rgb(234, 246, 255);
   margin-bottom: 10px;
 
+}
+
+.btm_add_cart{
+  cursor: pointer;
+}
+.btn_minus_cart{
+  cursor: pointer;
+}
+.btn_add_cart_product{
+  cursor: pointer;
 }
 
 @media (min-width: 850px) {
