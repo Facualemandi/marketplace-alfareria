@@ -4,7 +4,7 @@ import { RiWhatsappFill } from "react-icons/ri";
 import DataEnvio from "../DataEnvío/DataEnvio";
 
 const initialValue = {
-  nombre: "",
+  name: "",
   apellido: "",
   calle: "",
   numero: "",
@@ -56,7 +56,7 @@ const Data = ({ productInTheCart }) => {
     e.preventDefault();
 
     let mensaje = `send?phone=${telefono}&text=*_Hola!, mi pedido es el siguiente:_*%0A*¿Cual es tu nombre?*%0A${
-      form.nombre
+      form.name
     }%20${form.apellido}%0A*¿Cual es tu pedido?*%0A${products.join(
       ""
     )}%0A*¿Forma de entrega?*%0A${
@@ -84,6 +84,8 @@ const Data = ({ productInTheCart }) => {
     if (!retiroPersonal) {
       setRetiroPersonal(true);
       setEnvio(false);
+      setForm(initialValue)
+
     } else {
       setRetiroPersonal(false);
     }
@@ -131,7 +133,7 @@ const Data = ({ productInTheCart }) => {
           <div class="box_input">
             <label>Nombre: *</label>
             <input
-              name="nombre"
+              name="name"
               type="text"
               value={form.name}
               onChange={onChangeValue}
@@ -176,6 +178,7 @@ const Data = ({ productInTheCart }) => {
             onChangeValue={onChangeValue}
           />
           )}
+          {console.log(form)}
 
 
 <section className="section_forma_pago">
@@ -197,7 +200,7 @@ const Data = ({ productInTheCart }) => {
 
 </section>
 
-        {form.nombre &&
+        {form.name &&
           form.apellido &&
           retiroPersonal &&
           (efectivo || transferencia) && (
@@ -208,7 +211,7 @@ const Data = ({ productInTheCart }) => {
           )}
 
         {envio &&
-          form.nombre &&
+          form.name &&
           form.apellido &&
           form.calle &&
           form.barrio &&

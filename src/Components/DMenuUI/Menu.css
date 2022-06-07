@@ -1,7 +1,4 @@
 .container_menu {
-  background-color: rgb(244, 244, 244);
-  box-shadow: 1px 1px 2px 1px rgb(226, 226, 226);
-  border-radius: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,12 +14,10 @@
   height: 30px;
   position: absolute;
   z-index: 910;
-  
 }
 
 @media (min-width: 800px) {
-   .container_menu{
-     display: none;
-   }
+  .container_menu {
+    display: none;
+  }
 }
-

@@ -21,8 +21,6 @@
   font-size: 14px;
   display: flex;
   align-items: center;
-  border: 1px solid rgb(232, 232, 232);
-  border-radius: 5px;
 }
 .icon_menu_lateral {
   margin-right: 10px;

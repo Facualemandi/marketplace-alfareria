@@ -5,12 +5,8 @@ import WhatsApp from "../WhatsApp/WhatsApp";
 import "./ProductInTheCart.css";
 
 const ProductInTheCart = ({
-  count,
   productInTheCart,
   setProductInTheCart,
-  newCount,
-  newElementInCart,
-  setNewCount,
   makeOrder,
 }) => {
   const productValue = Object.values(productInTheCart);

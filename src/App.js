@@ -17,7 +17,7 @@ function App() {
   const [productInTheCart, setProductInTheCart] = useState([]);
   const [openModal, setOpenModal] = useState(false);
   const [newCount, setNewCount] = useState(0);
-  const [newId, setNewId] = useState();
+  const [newId, setNewId] = useState(0);
 
   const addProductCart = (data, id) => {
     if(count > 0){
@@ -37,8 +37,10 @@ function App() {
     }
   };
 
+
   useEffect(() => {
     productInTheCart.find((obj) => {
+      setNewId(0)
       if (obj.id === newId) {
         obj.amount = count;
         setNewCount(obj.amount);
