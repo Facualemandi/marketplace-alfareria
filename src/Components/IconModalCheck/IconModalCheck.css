@@ -38,3 +38,9 @@
   font-weight: bold;
   cursor: pointer;
 }
+
+@media (min-width: 850px){
+  .container_icon_check{
+    width: 30vw;
+  }
+}
